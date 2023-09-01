@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CursorController : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         //カーソルを非表示
@@ -13,7 +12,6 @@ public class CursorController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -27,9 +25,9 @@ public class CursorController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return))
         {
             //カーソルを非表示
-        Cursor.visible = false;
-        //カーソルを画面中央にロック
-        Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            //カーソルを画面中央にロック
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }

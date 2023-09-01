@@ -12,7 +12,7 @@ public class TimeController : MonoBehaviour
     {
         //シーンにあるTimeというオブジェクトを探して、このスクリプト上で定義
        this.timetext = GameObject.Find("timetext"); 
-       timer = 180;
+       timer = 184;
     }
 
     void Update()
