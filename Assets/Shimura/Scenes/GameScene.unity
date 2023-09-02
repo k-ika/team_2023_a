@@ -1255,7 +1255,6 @@ GameObject:
   - component: {fileID: 1235478626}
   - component: {fileID: 1235478625}
   - component: {fileID: 1235478631}
-  - component: {fileID: 1235478630}
   - component: {fileID: 1235478629}
   m_Layer: 0
   m_Name: Player
@@ -1365,23 +1364,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48645c453d598944ba933eece9c51528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainSPEED: 0.02
+  mainSPEED: 0.04
   x_sensi: 3
   y_sensi: 3
   camera: {fileID: 1250121724}
---- !u!114 &1235478630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235478624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6aa36eabd3713b428f1bbb35ffbf235, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainSPEED: 0.02
 --- !u!54 &1235478631
 Rigidbody:
   m_ObjectHideFlags: 0

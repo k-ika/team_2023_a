@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class charcontroller : MonoBehaviour
 {
+    //mainSPEEDという関数を定義
     public float mainSPEED;
     void Start()
     {      
@@ -11,7 +12,8 @@ public class charcontroller : MonoBehaviour
  
     void Update()
     {
-        Transform　trans = transform;
+
+        Transform　trans = transform;　//
         transform.position = trans.position;
         trans.position += trans.TransformDirection(Vector3.forward) * Input.GetAxis("Vertical") * mainSPEED;
         trans.position += trans.TransformDirection(Vector3.right) * Input.GetAxis("Horizontal") * mainSPEED;

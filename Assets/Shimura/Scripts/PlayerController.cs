@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-   public float mainSPEED;
-    public float x_sensi;
-    public float y_sensi;
-    public new GameObject camera;
+    public float mainSPEED;　//mainspeedをいじったら移動速度が変わる
+    public float x_sensi;　//これいじったらx方向の視点感度が変わる
+    public float y_sensi;　//これいじったらy方向の視点感度が変わる
+    public new GameObject camera;　//cameraにMainCamera入れといて
     void Start()
     {
     }
@@ -20,8 +20,8 @@ public class CameraController : MonoBehaviour
  
     void movecon()
     {
-        Transform trans = transform;
-        transform.position = trans.position;
+        Transform trans = transform;  
+        transform.position = trans.position;  //23,24行目は何書いてるか分かれへん
         trans.position += trans.TransformDirection(Vector3.forward) * Input.GetAxis("Vertical") * mainSPEED;
         trans.position += trans.TransformDirection(Vector3.right) * Input.GetAxis("Horizontal") * mainSPEED;
     }
