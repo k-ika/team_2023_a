@@ -4,14 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Shimura/Scenes/Title.unity
-    guid: 441e1377d1c4e4c4fa5444e14f50801b
-  - enabled: 1
-    path: Assets/Shimura/Scenes/SelectLevel.unity
-    guid: 240c6b6396c9acd488e99a72c1f9242c
-  - enabled: 1
-    path: Assets/Shimura/Scenes/Game_Easy.unity
-    guid: b0f3bd760a13bc046ad097b612ec72bb
+  m_Scenes: []
   m_configObjects: {}
