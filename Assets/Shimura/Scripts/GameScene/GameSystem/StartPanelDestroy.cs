@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class StartPanelDestroy : MonoBehaviour
 {
-    public float time = 4;
-    //DestroyしたいGameObject(基本はアタッチされたもの)
-    public GameObject StartPanel;
+    [SerializeField] float destroytime = 4;
+    [SerializeField] GameObject StartPanel;
 
     void Start()
     {
-        Destroy(StartPanel, time);
+        Destroy(StartPanel, destroytime);
     }
 
     void Update()
