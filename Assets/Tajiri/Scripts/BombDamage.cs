@@ -49,6 +49,12 @@ namespace ExplosionSample
                 {
                     damageReceiver.TakeDamage(Mathf.RoundToInt(damage));
                 }
+
+                Detonator damageReceiver1 = collider.GetComponent<Detonator>();
+                if (damageReceiver1 != null)
+                {
+                    damageReceiver1.TakeDamage1(Mathf.RoundToInt(damage));
+                }
             }
         }
     }
