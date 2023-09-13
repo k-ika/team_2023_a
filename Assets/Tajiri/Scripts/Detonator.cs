@@ -1,5 +1,6 @@
 using UnityEngine;
-
+namespace ExplosionSample
+{
 public class Detonator : MonoBehaviour
 {
     // 最大体力をインスペクタウィンドウから調整可能にするためにpublicに変更
@@ -8,12 +9,12 @@ public class Detonator : MonoBehaviour
 
     private int currentHealth; // 現在の体力
 
+    [Header("爆風のPrefab")] [SerializeField] private DetonationalExplosion _explosionPrefab;
+
+
     // インスペクタウィンドウから設定可能な遅延時間
     [Header("死亡後の遅延時間（秒）")] [SerializeField]
     private float deathDelay = 3f;
-
-    [Header("爆風のプレハブ")] [SerializeField]
-    private GameObject explosionPrefab; // 爆風のプレハブ
 
     private void Start()
     {
@@ -35,9 +36,11 @@ public class Detonator : MonoBehaviour
     private void Explode3()
     {
         // 爆風のプレハブを生成
-        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        var explosion = Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+            explosion.Explode();
 
         // オブジェクトの破壊
         Destroy(gameObject);
     }
+}
 }
