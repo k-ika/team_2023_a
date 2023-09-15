@@ -56,7 +56,7 @@ public class YuubakubutuRay : MonoBehaviour
                     //親子関係を作る（親：カメラ、子：HittedObject）
                     HittedObject.transform.parent = fpsCam.transform;
                     //HitしたオブジェクトについているRigidbodyを削除する
-                    Destroy(HittedObject.GetComponent<Rigidbody>);
+                    //Destroy(HittedObject.GetComponent<Rigidbody>);
 
                 }
             }

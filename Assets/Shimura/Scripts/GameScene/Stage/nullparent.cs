@@ -31,7 +31,7 @@ public class nullparent : MonoBehaviour
                 //Hitしたオブジェクトのrotationを0に
                 this.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 //このオブジェクトにRigidbodyをつける
-                this.AddComponent<Rigidbody>();               
+                //this.AddComponent<Rigidbody>();               
                 }
             }
         }
