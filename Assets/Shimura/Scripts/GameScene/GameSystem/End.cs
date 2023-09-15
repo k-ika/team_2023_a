@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class End : MonoBehaviour
 {
     [SerializeField] GameObject GameSystem;
 
     [SerializeField] GameObject EndPanel;
+
+    [SerializeField] GameObject timetext;
 
     //GameObject[] yuubakubutus;
     //GameObject[] items;
@@ -23,8 +26,9 @@ public class End : MonoBehaviour
 
     void Update()
     {
-        if (GameSystem.GetComponent<TimeController>().timer == 0)
+        if (timetext.GetComponent<TextMeshProUGUI>().text == "0")
         {
+            Debug.Log("終了");
             Invoke("LordResult",3);
             EndPanel.SetActive(true);
         }

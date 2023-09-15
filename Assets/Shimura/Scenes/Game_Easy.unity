@@ -958,6 +958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameSystem: {fileID: 556147618}
   EndPanel: {fileID: 2144205204}
+  timetext: {fileID: 504909352}
 --- !u!1 &614891719
 GameObject:
   m_ObjectHideFlags: 0
