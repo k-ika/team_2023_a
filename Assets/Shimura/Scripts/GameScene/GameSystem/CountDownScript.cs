@@ -7,8 +7,8 @@ public class CountDownScript : MonoBehaviour
 {
     [SerializeField] GameObject counttext;
 
-    [SerializeField] float counttime = 3;
-    [SerializeField] float hiddentime = 4;
+    [Header("3にしといて")]　[SerializeField] float counttime = 3;
+    [Header("4にしといて")]　[SerializeField] float hiddentime = 4;
     [SerializeField] GameObject StartPanel;
     void Start()
     {

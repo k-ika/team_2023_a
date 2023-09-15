@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CreateBomb : MonoBehaviour
 {
-    [SerializeField] GameObject ball;
+    [Header("爆弾")]　[SerializeField] GameObject ball;
 
     [SerializeField] GameObject Righthand;
     Rigidbody rb_ball;
-    [SerializeField] float thrust = 100f;
+    [Header("投げる強さ")]　[SerializeField] float thrust = 100f;
 
     [SerializeField] GameObject GameSystem;
  

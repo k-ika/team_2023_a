@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class YuubakubutuRay : MonoBehaviour
+public class RayYuubakubutu : MonoBehaviour
 {
-    [SerializeField] GameObject     fpsCam;             // カメラ
-    [SerializeField] float      distance = 0.8f;    // 検出可能な距離
-    public GameObject Righthand;                    //右手のポジション
+    [SerializeField] GameObject     MainCamera;             
+    [Header("誘爆物が持てる有効距離")] [SerializeField] float      distance = 0.8f;   
+    public GameObject Righthand;
+
+    [SerializeField] GameObject crosshair;
 
     // Hitしたオブジェクト格納用
     public RaycastHit raycastHit;
@@ -19,9 +21,9 @@ public class YuubakubutuRay : MonoBehaviour
     void Update()
     {
         // Rayはカメラの位置からとばす
-        var rayStartPosition   = fpsCam.transform.position;
+        var rayStartPosition   = MainCamera.transform.position;
         // Rayはカメラが向いてる方向にとばす
-        var rayDirection       = fpsCam.transform.forward.normalized;
+        var rayDirection       = MainCamera.transform.forward.normalized;
 
         // Hitしたオブジェクト格納用
         //RaycastHit raycastHit;
@@ -31,6 +33,9 @@ public class YuubakubutuRay : MonoBehaviour
         
         // Debug.DrawRay (Vector3 start(rayを開始する位置), Vector3 dir(rayの方向と長さ), Color color(ラインの色));
         //Debug.DrawRay(rayStartPosition, rayDirection * distance, Color.red);
+
+        //クロスヘアを表示
+        crosshair.SetActive(true);
         
         // なにかを検出したら
         if (isHit)
@@ -46,6 +51,10 @@ public class YuubakubutuRay : MonoBehaviour
             //検出したオブジェクトのタグが"Yuubakubutu"だったとき
             if (raycastHit.collider.CompareTag("Yuubakubutu"))
             {
+
+                //クロスヘアを一旦非表示にする
+                crosshair.SetActive(false);
+
                 //右クリックしているとき
                 if (Input.GetMouseButtonDown(1))
                 {   
@@ -54,7 +63,7 @@ public class YuubakubutuRay : MonoBehaviour
                     //Hitしたオブジェクトに右手の座標を代入
                     HittedObject.transform.position = Righthand.transform.position;
                     //親子関係を作る（親：カメラ、子：HittedObject）
-                    HittedObject.transform.parent = fpsCam.transform;
+                    HittedObject.transform.parent = MainCamera.transform;
                     //HitしたオブジェクトについているRigidbodyを削除する
                     Destroy(HittedObject.GetComponent<Rigidbody>());
 
@@ -74,5 +83,11 @@ public class YuubakubutuRay : MonoBehaviour
                 //HittedObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             }  
         } 
+
+        else 
+        {
+            //クロスヘアを表示
+            crosshair.SetActive(true);
+        }
     }
 }

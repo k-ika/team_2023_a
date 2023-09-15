@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class nullparent : MonoBehaviour
+public class Yuubakubutu : MonoBehaviour
 {
-   public GameObject fpsCam;
+   public GameObject MainCamera;
 
-   public YuubakubutuRay yuubakubutuScript;
+   [SerializeField] GameObject yuubakubutus;
+
+   [Header("Player入れといて")]public RayYuubakubutu yuubakubutuScript;
     void Start()
     {
         
@@ -14,7 +16,7 @@ public class nullparent : MonoBehaviour
 
     void Update()
     {
-        if (this.transform.parent == fpsCam.transform)
+        if (this.transform.parent == MainCamera.transform)
         {
             //右クリックを離したとき
             if (Input.GetMouseButtonUp(1))
@@ -27,7 +29,7 @@ public class nullparent : MonoBehaviour
                 //HitしたオブジェクトにRayが当たっている座標を代入する
                 gameObject.transform.position = yuubakubutuScript.raycastHit.point;
                 //親子関係を解除
-                gameObject.transform.parent = null;
+                gameObject.transform.parent = yuubakubutus.transform;
                 //Hitしたオブジェクトのrotationを0に
                 gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 //このオブジェクトにRigidbodyをつける

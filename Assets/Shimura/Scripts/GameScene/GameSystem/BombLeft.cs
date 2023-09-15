@@ -7,7 +7,7 @@ public class BombLeft : MonoBehaviour
 {
     [SerializeField] GameObject bombtext;
 
-    public int bombleft;
+    [Header("爆弾の個数")]　public int bombleft;
     void Start()
     {
         bombtext.GetComponent<TextMeshProUGUI>().text = "×" + bombleft.ToString("D2");
