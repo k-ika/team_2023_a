@@ -25,13 +25,13 @@ public class nullparent : MonoBehaviour
 
                 //Debug.Log("離した！");
                 //HitしたオブジェクトにRayが当たっている座標を代入する
-                this.transform.position = yuubakubutuScript.raycastHit.point;
+                gameObject.transform.position = yuubakubutuScript.raycastHit.point;
                 //親子関係を解除
-                this.transform.parent = null;
+                gameObject.transform.parent = null;
                 //Hitしたオブジェクトのrotationを0に
-                this.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 //このオブジェクトにRigidbodyをつける
-                //this.AddComponent<Rigidbody>();               
+                gameObject.AddComponent<Rigidbody>();               
                 }
             }
         }
