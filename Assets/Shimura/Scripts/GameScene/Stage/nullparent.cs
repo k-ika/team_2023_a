@@ -12,7 +12,6 @@ public class nullparent : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (this.transform.parent == fpsCam.transform)
@@ -31,6 +30,8 @@ public class nullparent : MonoBehaviour
                 this.transform.parent = null;
                 //Hitしたオブジェクトのrotationを0に
                 this.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                //このオブジェクトにRigidbodyをつける
+                this.AddComponent<Rigidbody>();               
                 }
             }
         }
