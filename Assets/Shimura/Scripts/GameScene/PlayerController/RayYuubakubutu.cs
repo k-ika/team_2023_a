@@ -6,7 +6,7 @@ public class RayYuubakubutu : MonoBehaviour
 {
     [SerializeField] GameObject     MainCamera;             
     [Header("誘爆物が持てる有効距離")] [SerializeField] float      distance = 0.8f;   
-    public GameObject Righthand;
+    [Header("持つ手")] public GameObject hand;
 
     [SerializeField] GameObject crosshair;
 
@@ -61,7 +61,7 @@ public class RayYuubakubutu : MonoBehaviour
                     //Hitしたオブジェクトの名前を変える
                     GameObject HittedObject = raycastHit.collider.gameObject;
                     //Hitしたオブジェクトに右手の座標を代入
-                    HittedObject.transform.position = Righthand.transform.position;
+                    HittedObject.transform.position = hand.transform.position;
                     //親子関係を作る（親：カメラ、子：HittedObject）
                     HittedObject.transform.parent = MainCamera.transform;
                     //HitしたオブジェクトについているRigidbodyを削除する

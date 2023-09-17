@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrenadeTest : MonoBehaviour
+public class throwedbomb : MonoBehaviour
 {
     [SerializeField] float motodamage;              //ダメージ
 

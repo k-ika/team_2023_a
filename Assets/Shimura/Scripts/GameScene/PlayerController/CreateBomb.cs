@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class CreateBomb : MonoBehaviour
 {
-    [Header("爆弾")]　[SerializeField] GameObject ball;
+    float clicktime;
+    float starttime;
+    [Header("その場に落とす爆弾")]　[SerializeField] GameObject puttedbomb;
 
-    [SerializeField] GameObject Righthand;
+    [Header("投げる爆弾")]　[SerializeField] GameObject throwedbomb;
+
+    [Header("落とす場所")] [SerializeField] GameObject fallpoint;
+
+    [Header("投げ始める場所")] [SerializeField] GameObject throwpoint;
     Rigidbody rb_ball;
     [Header("投げる強さ")]　[SerializeField] float thrust = 100f;
 
@@ -19,12 +25,32 @@ public class CreateBomb : MonoBehaviour
  
     void Update()
     {
+        //クリックしている時間を調べる
+        if (Input.GetMouseButtonDown(0))
+        {
+            starttime = Time.time;
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            clicktime = Time.time - starttime;
+            //Debug.Log(clicktime);
+        }
+
+        //ボムの残量が0じゃないとき
         if (GameSystem.GetComponent<BombLeft>().bombleft != 0)
         {
-            if (Input.GetMouseButtonDown(0)) // マウスの左クリックをしたとき
+            if (clicktime < 0.3f && clicktime > 0.0001f)
             {
-                rb_ball = Instantiate(ball, Righthand.transform.position, Righthand.transform.rotation).GetComponent<Rigidbody>(); // 玉を生成
-                rb_ball.AddForce(transform.forward * thrust, ForceMode.Impulse); // カーソルの方向に力を一度加える
+                rb_ball = Instantiate(puttedbomb, fallpoint.transform.position, fallpoint.transform.rotation).GetComponent<Rigidbody>(); // 玉を生成 
+                clicktime = 0f;  
+            }
+
+            else if (clicktime >= 0.3f)
+            {
+                rb_ball = Instantiate(throwedbomb, throwpoint.transform.position, throwpoint.transform.rotation).GetComponent<Rigidbody>(); // 玉を生成
+                rb_ball.AddForce(throwpoint.transform.forward * thrust, ForceMode.Impulse); // カーソルの方向に力を一度加える
+                clicktime = 0f;
             }
         }
     }
