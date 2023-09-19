@@ -7,7 +7,13 @@ public class BombLeft : MonoBehaviour
 {
     [SerializeField] GameObject bombtext;
 
-    [Header("爆弾の個数")]　public int bombleft;
+    [Header("爆弾の個数")] public int bombleft;
+
+    [SerializeField] private GameObject StartPanel;
+
+    [SerializeField] private GameObject EndPanel;
+
+    [SerializeField] private GameObject PausePanel;
     void Start()
     {
         bombtext.GetComponent<TextMeshProUGUI>().text = "×" + bombleft.ToString("D2");
@@ -17,10 +23,17 @@ public class BombLeft : MonoBehaviour
     {
         if (bombleft > 0)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (StartPanel.activeSelf || EndPanel.activeSelf || PausePanel.activeSelf)
             {
-                bombleft -= 1;
-                bombtext.GetComponent<TextMeshProUGUI>().text = "×" + bombleft.ToString("D2");
+
+            }
+            else
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    bombleft -= 1;
+                    bombtext.GetComponent<TextMeshProUGUI>().text = "×" + bombleft.ToString("D2");
+                }
             }
         }
 

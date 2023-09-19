@@ -12,44 +12,53 @@ public class End : MonoBehaviour
 
     [SerializeField] GameObject timetext;
 
-    //GameObject[] yuubakubutus;
-    //GameObject[] items;
+    [Header("スコアの上限（すべてのオブジェクトのスコアの合計値）")] [SerializeField] int maxscore;
+
+    int s;
+    int bl;
+    float tl;
+
+
+
     void Start()
     {
         EndPanel.SetActive(false);
-        //配列yuubakubutusにすべての物や誘爆物を入れる
-        //GameObject[] yuubakubutus = GameObject.FindGameObjectsWithTag("Yuubakubutu");
-        //配列itemsにすべての物や誘爆物を入れる
-        //GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
-
     }
 
     void Update()
     {
+        //0秒になったらゲーム終了
         if (timetext.GetComponent<TextMeshProUGUI>().text == "0")
         {
-            Debug.Log("終了");
-            Invoke("LordResult",3);
+            Invoke("LoadResult",3);
             EndPanel.SetActive(true);
         }
 
+        //爆弾の残量が0になったらゲーム終了
         if (GameSystem.GetComponent<BombLeft>().bombleft == 0)
         {
-            Invoke("LordResult",3);
+            Invoke("LoadResult",3);
             EndPanel.SetActive(true);
         }
 
-        //物や誘爆物がすべてなくなれば
-        //if (yuubakubutus.Length = 0 & items.Length = 0)
-        //{
-            //Invoke("LordResult",3);
-        //}
+        //スコアが上限に達したらゲーム終了
+        if (GameSystem.GetComponent<Score>().sumscore == maxscore)
+        {
+            Invoke("LoadResult",3);
+            EndPanel.SetActive(true);
+        }
     }
-
-
-    void LordResult()
+    void LoadResult()
     {
+        //変数に代入
+        s = GameSystem.GetComponent<Score>().sumscore;
+        bl = GameSystem.GetComponent<BombLeft>().bombleft;
+        tl = GameSystem.GetComponent<TimeController>().timer;
+        //データをセーブ
+        PlayerPrefs.SetInt("score", s);
+        PlayerPrefs.SetInt("bombleft", bl);
+        PlayerPrefs.SetFloat("timeleft", tl);
+        //Resultシーンをロード
         SceneManager.LoadScene("Result");
     }
-
 }

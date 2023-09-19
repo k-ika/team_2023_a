@@ -7,7 +7,7 @@ public class Score : MonoBehaviour
 {
     [SerializeField] GameObject scoretext;
 
-    int sumscore; 
+    [Header("0のままで")] public int sumscore; 
     void Start()
     {
         scoretext.GetComponent<TextMeshProUGUI>().text = "Score:0000";

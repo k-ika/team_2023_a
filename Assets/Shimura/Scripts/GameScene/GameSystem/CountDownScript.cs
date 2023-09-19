@@ -12,6 +12,9 @@ public class CountDownScript : MonoBehaviour
     [SerializeField] GameObject StartPanel;
     void Start()
     {
+        // 全てのキーとデータを削除
+        PlayerPrefs.DeleteAll();
+        
         Invoke("HiddenStartPanel", hiddentime);
     }
 
