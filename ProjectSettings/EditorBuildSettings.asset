@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GameScene_easy.unity
-    guid: d902ad040ce19854db8ee685f632c6fd
+    path: Assets/Tajiri/Scenes/DifficultySelectionScene.unity
+    guid: 370e1f3c166fe8f4cbb76c3736227593
   - enabled: 1
-    path: Assets/Scenes/Result.unity
-    guid: 1b06c7ee87684164b9970303f0691607
+    path: Assets/Tajiri/Scenes/Title.unity
+    guid: 04950639631a9cf40aeef4644f699d65
+  - enabled: 1
+    path: Assets/Tajiri/Scenes/HardGameScene.unity
+    guid: c647807a3dbd8794e9c2101a91019013
+  - enabled: 1
+    path: Assets/Tajiri/Scenes/EasyGameScene.unity
+    guid: 6188c7937419a114ba42057db53a52fd
   m_configObjects: {}
