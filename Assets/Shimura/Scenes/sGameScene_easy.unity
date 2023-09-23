@@ -16248,6 +16248,7 @@ GameObject:
   - component: {fileID: 556147628}
   - component: {fileID: 556147629}
   - component: {fileID: 556147630}
+  - component: {fileID: 556147631}
   m_Layer: 0
   m_Name: GameSystem
   m_TagString: Untagged
@@ -16404,7 +16405,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 556147618}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4c94964bfcf58c4693f7a4b812d552b, type: 3}
   m_Name: 
@@ -16426,6 +16427,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18863f59758c1244949891d9c87b9de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PausePanel: {fileID: 235279367}
+--- !u!114 &556147631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556147618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf7e644eccba6442bc7b3857922b881, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 800747928}
+  GameSystem: {fileID: 556147618}
+  StartPanel: {fileID: 1792037295}
+  EndPanel: {fileID: 1392389353}
   PausePanel: {fileID: 235279367}
 --- !u!1 &569344528
 GameObject:
@@ -21840,11 +21858,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 800747932}
+  - component: {fileID: 800747935}
   - component: {fileID: 800747931}
   - component: {fileID: 800747930}
   - component: {fileID: 800747929}
-  - component: {fileID: 800747933}
-  - component: {fileID: 800747934}
+  - component: {fileID: 800747937}
+  - component: {fileID: 800747936}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -21893,7 +21912,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 800747928}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48645c453d598944ba933eece9c51528, type: 3}
   m_Name: 
@@ -21918,7 +21937,27 @@ Transform:
   - {fileID: 206145962}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &800747933
+--- !u!114 &800747935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800747928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7dc76caa190c3d44b77b6041716d8ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainSPEED: 0.04
+  x_sensi: 3
+  y_sensi: 3
+  camera: {fileID: 206145961}
+  pxLimit: 23
+  nxLimit: -23
+  pzLimit: 23
+  nzLimit: -23
+--- !u!65 &800747936
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21937,9 +21976,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.453509, z: 1}
-  m_Center: {x: 0, y: 1.0090249, z: 0}
---- !u!54 &800747934
+  m_Size: {x: 1, y: 1.7201259, z: 1}
+  m_Center: {x: 0, y: 0.9584125, z: 0}
+--- !u!54 &800747937
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
