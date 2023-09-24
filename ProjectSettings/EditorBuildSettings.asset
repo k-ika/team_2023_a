@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Tajiri/Scenes/EasyGameScene.unity
     guid: 6188c7937419a114ba42057db53a52fd
+  - enabled: 1
+    path: Assets/Tajiri/Scenes/Result.unity
+    guid: a8c7c1f4ac3a839448f857d977a95676
   m_configObjects: {}
