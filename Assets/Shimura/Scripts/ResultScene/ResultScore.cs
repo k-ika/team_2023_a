@@ -64,7 +64,7 @@ public class ResultScore : MonoBehaviour
 
     void DisplayTimeLeftText()
     {
-        TimeLeftText.GetComponent<TextMeshProUGUI>().text = "TimeLeft:" + timeleft.ToString("F0");
+        TimeLeftText.GetComponent<TextMeshProUGUI>().text = "TimeLefta:" + timeleft.ToString("F0");
         TimeLeftText.SetActive(true);
     }
 

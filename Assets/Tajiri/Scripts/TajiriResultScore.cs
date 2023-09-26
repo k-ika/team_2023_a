@@ -52,19 +52,19 @@ public class TajiriResultScore : MonoBehaviour
 
     void DisplayScoretext()
     {
-        ScoreText.GetComponent<TextMeshProUGUI>().text = "Score:" + score.ToString("D4");
+        ScoreText.GetComponent<TextMeshProUGUI>().text = "ポイント:" + score.ToString("D4");
         ScoreText.SetActive(true);
     }
 
     void DisplayBombLeftText()
     {
-        BombLeftText.GetComponent<TextMeshProUGUI>().text = "BombLeft:" + bombleft.ToString("D2");
+        BombLeftText.GetComponent<TextMeshProUGUI>().text = "爆弾残量:" + bombleft.ToString("D2");
         BombLeftText.SetActive(true);
     }
 
     void DisplayTimeLeftText()
     {
-        TimeLeftText.GetComponent<TextMeshProUGUI>().text = "TimeLeft:" + timeleft.ToString("F0");
+        TimeLeftText.GetComponent<TextMeshProUGUI>().text = "残り時間:" + timeleft.ToString("F0");
         TimeLeftText.SetActive(true);
     }
 
@@ -75,7 +75,7 @@ public class TajiriResultScore : MonoBehaviour
         //合計スコアの計算式
         int sumscore = score + bombleft * multipliedbomb + t * multipliedtime;
 
-        SumScoreText.GetComponent<TextMeshProUGUI>().text = "SumScore:" + sumscore.ToString("D4");
+        SumScoreText.GetComponent<TextMeshProUGUI>().text = "合計スコア:" + sumscore.ToString("D4");
         SumScoreText.SetActive(true);
     }
 
