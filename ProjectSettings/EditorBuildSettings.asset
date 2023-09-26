@@ -5,18 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Tajiri/Scenes/DifficultySelectionScene.unity
     guid: 370e1f3c166fe8f4cbb76c3736227593
   - enabled: 1
     path: Assets/Tajiri/Scenes/Title.unity
     guid: 04950639631a9cf40aeef4644f699d65
-  - enabled: 1
+  - enabled: 0
     path: Assets/Tajiri/Scenes/HardGameScene.unity
     guid: c647807a3dbd8794e9c2101a91019013
   - enabled: 1
     path: Assets/Tajiri/Scenes/EasyGameScene.unity
-    guid: 6188c7937419a114ba42057db53a52fd
+    guid: 3f6fc263bcb64ed4aa9edc2abf8875a6
   - enabled: 1
     path: Assets/Tajiri/Scenes/Result.unity
     guid: a8c7c1f4ac3a839448f857d977a95676
