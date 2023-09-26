@@ -10,7 +10,7 @@ public class Score : MonoBehaviour
     [Header("0のままで")] public int sumscore; 
     void Start()
     {
-        scoretext.GetComponent<TextMeshProUGUI>().text = "Score:0000";
+        scoretext.GetComponent<TextMeshProUGUI>().text = "ポイント:0000";
     }
 
     void Update()
@@ -21,6 +21,6 @@ public class Score : MonoBehaviour
     public void PlusScore(int score)
     {
         sumscore += score;
-        scoretext.GetComponent<TextMeshProUGUI>().text = "Score:" + sumscore.ToString("D4");
+        scoretext.GetComponent<TextMeshProUGUI>().text = "ポイント:" + sumscore.ToString("D4");
     }
 }
