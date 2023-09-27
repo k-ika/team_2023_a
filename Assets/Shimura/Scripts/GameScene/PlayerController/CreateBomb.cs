@@ -38,7 +38,7 @@ public class CreateBomb : MonoBehaviour
         }
 
         //ボムの残量が0じゃないとき
-        if (GameSystem.GetComponent<BombLeft>().bombleft != 0)
+        if (GameSystem.GetComponent<BombLeft>().bombleft != -1)
         {
             if (clicktime < 0.3f && clicktime > 0.0001f)
             {

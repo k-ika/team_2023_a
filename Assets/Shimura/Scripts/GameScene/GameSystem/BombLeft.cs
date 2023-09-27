@@ -21,7 +21,7 @@ public class BombLeft : MonoBehaviour
 
     void Update()
     {
-        if (bombleft > 0)
+        if (bombleft > -1)
         {
             if (StartPanel.activeSelf || EndPanel.activeSelf || PausePanel.activeSelf)
             {
@@ -29,7 +29,7 @@ public class BombLeft : MonoBehaviour
             }
             else
             {
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonUp(0))
                 {
                     bombleft -= 1;
                     bombtext.GetComponent<TextMeshProUGUI>().text = "×" + bombleft.ToString("D2");
