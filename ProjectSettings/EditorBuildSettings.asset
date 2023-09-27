@@ -20,16 +20,28 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Tajiri/Scenes/Result.unity
     guid: a8c7c1f4ac3a839448f857d977a95676
-  - enabled: 1
+  - enabled: 0
     path: Assets/Shimura/Scenes/16;9/Title.unity
     guid: e04c9957b3f9ae842a50715bfb8952c3
   - enabled: 1
+    path: Assets/Tajiri/Scenes/New/Title.unity
+    guid: 45bf51ddc389f94438329f74d97592e5
+  - enabled: 1
+    path: Assets/Tajiri/Scenes/New/EasyGameScene.unity
+    guid: e52edafa92261124e86e0eeb96d0eda9
+  - enabled: 1
+    path: Assets/Tajiri/Scenes/New/HardGameScene.unity
+    guid: 43394d387056619468af97f6ce092cca
+  - enabled: 1
+    path: Assets/Tajiri/Scenes/New/Result.unity
+    guid: b37e2534eac29db4d8d7af28b18bbc44
+  - enabled: 0
     path: Assets/Shimura/Scenes/16;9/EasyGameScene.unity
     guid: 4a1e6ba1cf9634b4bba654c61b426ba2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Shimura/Scenes/16;9/HardGameScene.unity
     guid: 27b0480a746256a45b45eb4972b9b6a1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Shimura/Scenes/16;9/Result.unity
     guid: c4e764522b8d563488dd3388326dcbf8
   m_configObjects: {}
