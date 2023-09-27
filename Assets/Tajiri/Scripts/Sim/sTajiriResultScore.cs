@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ResultScore : MonoBehaviour
+public class sTajiriResultScore : MonoBehaviour
 {
     int score;
     int bombleft;
@@ -26,6 +26,7 @@ public class ResultScore : MonoBehaviour
     [SerializeField] private GameObject SE;
 
     [SerializeField] private GameObject SE2;
+
 
     void Start()
     {
@@ -56,21 +57,21 @@ public class ResultScore : MonoBehaviour
 
     void DisplayScoretext()
     {
-        ScoreText.GetComponent<TextMeshProUGUI>().text = "Score:" + score.ToString("D4");
+        ScoreText.GetComponent<TextMeshProUGUI>().text = "ポイント:" + score.ToString("D4");
         ScoreText.SetActive(true);
         SE.GetComponent<AudioSource>().Play();
     }
 
     void DisplayBombLeftText()
     {
-        BombLeftText.GetComponent<TextMeshProUGUI>().text = "BombLeft:" + bombleft.ToString("D2");
+        BombLeftText.GetComponent<TextMeshProUGUI>().text = "爆弾残量:" + bombleft.ToString("D2");
         BombLeftText.SetActive(true);
         SE.GetComponent<AudioSource>().Play();
     }
 
     void DisplayTimeLeftText()
     {
-        TimeLeftText.GetComponent<TextMeshProUGUI>().text = "TimeLefta:" + timeleft.ToString("F0");
+        TimeLeftText.GetComponent<TextMeshProUGUI>().text = "残り時間:" + timeleft.ToString("F0");
         TimeLeftText.SetActive(true);
         SE.GetComponent<AudioSource>().Play();
     }
@@ -82,7 +83,7 @@ public class ResultScore : MonoBehaviour
         //合計スコアの計算式
         int sumscore = score + bombleft * multipliedbomb + t * multipliedtime;
 
-        SumScoreText.GetComponent<TextMeshProUGUI>().text = "SumScore:" + sumscore.ToString("D4");
+        SumScoreText.GetComponent<TextMeshProUGUI>().text = "合計スコア:" + sumscore.ToString("D4");
         SumScoreText.SetActive(true);
         SE2.GetComponent<AudioSource>().Play();
     }
