@@ -2857,7 +2857,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aabe00ccdf2d74243b03f744c5c96245, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 132c3305dfa90a04b8c5381e94861073, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
@@ -2952,7 +2952,7 @@ Transform:
   m_GameObject: {fileID: 914888940}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 517.1022, y: 222.9055, z: 26.047302}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
