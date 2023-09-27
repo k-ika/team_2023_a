@@ -24,21 +24,38 @@ public class sDetonator : MonoBehaviour
     [Header("スコア")] [SerializeField] int score;
 
     [SerializeField] GameObject GameSystem;
+
+
+
+
+
+
     private void Start()
     {
         currentHealth = maxHealth; // ゲーム開始時に体力を最大値に設定
     }
 
+
+
+
+
     // ダメージを受けたときの処理
     public void TakeDamage1(int damage)
     {
-        currentHealth -= damage;
-        if (currentHealth <= 0)
+        if (currentHealth > 0)
         {
-            // インスペクタで設定した遅延時間後にExplosionメソッドを呼び出す
-            Invoke("Explode3", deathDelay);
+            currentHealth -= damage;
+            if (currentHealth <= 0)
+            {
+                // インスペクタで設定した遅延時間後にExplosionメソッドを呼び出す
+                Invoke("Explode3", deathDelay);
+            }
         }
     }
+
+
+
+
 
     // 爆発をトリガーするメソッド
     private void Explode3()
@@ -54,6 +71,9 @@ public class sDetonator : MonoBehaviour
         //GameSystemにScoreを足す
         GameSystem.GetComponent<Score>().PlusScore(score);
     }
+
+
+
 
     private void Explode1()
         {

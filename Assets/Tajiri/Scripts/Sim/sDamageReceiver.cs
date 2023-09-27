@@ -24,11 +24,14 @@ public class sDamageReceiver : MonoBehaviour
     // ダメージを受けたときの処理
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        if (currentHealth <= 0)
+        if (currentHealth > 0)
         {
-            // インスペクタで設定した遅延時間後にDieメソッドを呼び出す
-            Invoke("Die", deathDelay);
+            currentHealth -= damage;
+            if (currentHealth <= 0)
+            {
+                // インスペクタで設定した遅延時間後にDieメソッドを呼び出す
+                Invoke("Die", deathDelay);
+            }
         }
     }
 

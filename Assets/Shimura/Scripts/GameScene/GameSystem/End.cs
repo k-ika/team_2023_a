@@ -30,24 +30,31 @@ public class End : MonoBehaviour
         //0秒になったらゲーム終了
         if (timetext.GetComponent<TextMeshProUGUI>().text == "0")
         {
-            Invoke("LoadResult",3);
-            EndPanel.SetActive(true);
+            Invoke("EndPanelSet",1);
+            Invoke("LoadResult",6);
         }
 
         //爆弾の残量が0になったらゲーム終了
         if (GameSystem.GetComponent<BombLeft>().bombleft == 0)
         {
-            Invoke("LoadResult",3);
-            EndPanel.SetActive(true);
+            Invoke("EndPanelSet",1);
+            Invoke("LoadResult",6);
         }
 
         //スコアが上限に達したらゲーム終了
         if (GameSystem.GetComponent<Score>().sumscore == maxscore)
         {
-            Invoke("LoadResult",3);
-            EndPanel.SetActive(true);
+            Invoke("EndPanelSet",1);
+            Invoke("LoadResult",6);
         }
     }
+
+    void EndPanelSet()
+    {
+        EndPanel.SetActive(true);
+    }
+
+
     void LoadResult()
     {
         //変数に代入
