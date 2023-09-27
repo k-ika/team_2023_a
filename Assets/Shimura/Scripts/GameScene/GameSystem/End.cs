@@ -38,7 +38,7 @@ public class End : MonoBehaviour
         if (GameSystem.GetComponent<BombLeft>().bombleft == 0)
         {
             Invoke("EndPanelSet",1);
-            Invoke("LoadResult",6);
+            Invoke("LoadResult",10);
         }
 
         //スコアが上限に達したらゲーム終了
