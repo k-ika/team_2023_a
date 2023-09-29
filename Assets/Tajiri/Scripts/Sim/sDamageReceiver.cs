@@ -14,11 +14,13 @@ public class sDamageReceiver : MonoBehaviour
 
     [Header("スコア")] [SerializeField] int score;
 
-    [SerializeField] GameObject GameSystem;
+    //[SerializeField] GameObject GameSystem;
+    GameObject GameSystem;
 
     private void Start()
     {
         currentHealth = maxHealth; // ゲーム開始時に体力を最大値に設定
+        GameSystem = GameObject.Find("GameSystem");
     }
 
     // ダメージを受けたときの処理

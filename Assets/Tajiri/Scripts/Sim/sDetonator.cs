@@ -11,20 +11,18 @@ public class sDetonator : MonoBehaviour
 
     [Header("爆風のPrefab")] [SerializeField] private DetonationalExplosion _explosionPrefab;
 
-
     // インスペクタウィンドウから設定可能な遅延時間
-    [Header("死亡後の遅延時間（秒）")] [SerializeField]
-    private float deathDelay = 3f;
+    [Header("死亡後の遅延時間（秒）")] [SerializeField] private float deathDelay = 3f;
     
     [Header("爆風の範囲")] [SerializeField] private float explosionRadius = 5f;
 
-        // maxDamage フィールドをインスペクタから設定できるようにpublicに変更
-        [Header("最大ダメージ")] [SerializeField] private float maxDamage = 50f;
+    // maxDamage フィールドをインスペクタから設定できるようにpublicに変更
+    [Header("最大ダメージ")] [SerializeField] private float maxDamage = 50f;
 
     [Header("スコア")] [SerializeField] int score;
 
-    [SerializeField] GameObject GameSystem;
-
+    //[SerializeField] GameObject GameSystem;
+    GameObject GameSystem;
 
 
 
@@ -33,6 +31,7 @@ public class sDetonator : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth; // ゲーム開始時に体力を最大値に設定
+        GameSystem = GameObject.Find("GameSystem");
     }
 
 
