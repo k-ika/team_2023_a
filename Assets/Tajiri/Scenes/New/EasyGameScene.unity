@@ -5322,9 +5322,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &125630517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5343,7 +5340,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1001 &126414019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5697,19 +5693,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 585424061013499511, guid: 2c79045bc9533f64295b52b083ac3fe7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 800915432}
-    - targetCorrespondingSourceObject: {fileID: 585424061013499511, guid: 2c79045bc9533f64295b52b083ac3fe7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 800915431}
-    - targetCorrespondingSourceObject: {fileID: 585424061013499511, guid: 2c79045bc9533f64295b52b083ac3fe7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 800915430}
-    - targetCorrespondingSourceObject: {fileID: 585424061013499511, guid: 2c79045bc9533f64295b52b083ac3fe7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 800915429}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c79045bc9533f64295b52b083ac3fe7, type: 3}
 --- !u!4 &160924100 stripped
 Transform:
@@ -12060,7 +12044,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &421648523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12404,7 +12387,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &450026608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17791,8 +17773,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Time
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
+  m_sharedMaterial: {fileID: 2998764088270197956, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -18004,9 +17986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &548060341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18025,7 +18004,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1 &557640116 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3841199001617980632, guid: 2583b25703ac3e44f89d86a532d24710, type: 3}
@@ -18069,9 +18047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &557640120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18090,7 +18065,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1001 &560002478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23143,6 +23117,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2845427827780081423, guid: 3cccbcc3ddbd548499b33eaf274728c4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2949974529208723813, guid: 3cccbcc3ddbd548499b33eaf274728c4, type: 3}
       propertyPath: m_Name
       value: office yuka Variant
@@ -23927,8 +23905,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
+  m_sharedMaterial: {fileID: 2998764088270197956, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24384,95 +24362,6 @@ MonoBehaviour:
   nxLimit: -9
   pzLimit: 28
   nzLimit: 0
---- !u!1 &800915425 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 585424061013499511, guid: 2c79045bc9533f64295b52b083ac3fe7, type: 3}
-  m_PrefabInstance: {fileID: 160924099}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &800915429
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800915425}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.10139518, y: 0.40967733, z: 0.029628195}
-  m_Center: {x: -0.17334318, y: -0.0068603833, z: 0.014814101}
---- !u!65 &800915430
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800915425}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.09986364, y: 0.41891968, z: 0.02962819}
-  m_Center: {x: 0.17248821, y: -0.012118324, z: 0.014814097}
---- !u!65 &800915431
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800915425}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.4442734, y: 0.12031299, z: 0.029628191}
-  m_Center: {x: -0.0015984534, y: 0.13830818, z: 0.014814099}
---- !u!65 &800915432
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800915425}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.44655463, y: 0.13134703, z: 0.029628195}
-  m_Center: {x: -0.0012488206, y: -0.14458238, z: 0.0148141}
 --- !u!4 &803705476 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7483566154346024614, guid: 434377788a851464d83b3e6d163be37c, type: 3}
@@ -24542,8 +24431,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Finish!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
+  m_sharedMaterial: {fileID: 2998764088270197956, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24617,48 +24506,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814102588}
   m_CullTransparentMesh: 1
---- !u!1 &821090889 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6268160260798317854, guid: a56b9f9dea0011d4e9b57f9e4c107cd0, type: 3}
-  m_PrefabInstance: {fileID: 1332151392}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &821090890
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821090889}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.0029779414, y: 0.0029779405, z: 0.00029760064}
-  m_Center: {x: 0, y: 0, z: -0.0000011166997}
---- !u!114 &821090891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821090889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5722399572d9414ba745f8cd9bd4059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1
-  deathDelay: 3
-  score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!4 &821090894 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6752912485720448932, guid: a56b9f9dea0011d4e9b57f9e4c107cd0, type: 3}
@@ -25457,7 +25304,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &977889857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26080,12 +25926,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -26338,9 +26184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &1121725106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26359,7 +26202,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1001 &1124956865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27319,8 +27161,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xD700"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
+  m_sharedMaterial: {fileID: 2998764088270197956, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28124,13 +27966,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6268160260798317854, guid: a56b9f9dea0011d4e9b57f9e4c107cd0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 821090891}
-    - targetCorrespondingSourceObject: {fileID: 6268160260798317854, guid: a56b9f9dea0011d4e9b57f9e4c107cd0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 821090890}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a56b9f9dea0011d4e9b57f9e4c107cd0, type: 3}
 --- !u!1001 &1336351362
 PrefabInstance:
@@ -28528,9 +28364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &1386127137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28549,7 +28382,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1 &1392389353
 GameObject:
   m_ObjectHideFlags: 0
@@ -29077,10 +28909,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 95156386749963159, guid: 58db9492b6266324ab3d1404db8e7763, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 727824566833316141, guid: 58db9492b6266324ab3d1404db8e7763, type: 3}
       propertyPath: m_Name
       value: WhiteBoard
@@ -29088,16 +28916,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 727824566833316141, guid: 58db9492b6266324ab3d1404db8e7763, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1799052694}
-    - targetCorrespondingSourceObject: {fileID: 727824566833316141, guid: 58db9492b6266324ab3d1404db8e7763, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1799052693}
-    - targetCorrespondingSourceObject: {fileID: 727824566833316141, guid: 58db9492b6266324ab3d1404db8e7763, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1799052692}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58db9492b6266324ab3d1404db8e7763, type: 3}
 --- !u!1 &1463128361
 GameObject:
@@ -29518,7 +29337,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &1533397760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29887,7 +29705,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &1625012276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30137,7 +29954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timetext: {fileID: 504909352}
-  timer: 180
+  timer: 120
   StartPanel: {fileID: 1792037295}
   EndPanel: {fileID: 1392389353}
   PausePanel: {fileID: 235279367}
@@ -30244,9 +30061,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &1668845864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30265,7 +30079,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!4 &1669710552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4889014678279035837, guid: 1bf2c047447ab174b90d65cfdc5652e9, type: 3}
@@ -30550,9 +30363,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &1742769277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30571,7 +30381,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1 &1762184768
 GameObject:
   m_ObjectHideFlags: 0
@@ -30747,75 +30556,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1792037295}
   m_CullTransparentMesh: 1
---- !u!1 &1799052691 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 727824566833316141, guid: 58db9492b6266324ab3d1404db8e7763, type: 3}
-  m_PrefabInstance: {fileID: 1458420926}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1799052692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799052691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5722399572d9414ba745f8cd9bd4059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 10
-  deathDelay: 3
-  score: 10
-  GameSystem: {fileID: 1646821217}
---- !u!54 &1799052693
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799052691}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &1799052694
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799052691}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.021286564, y: 0.00536095, z: 0.018247446}
-  m_Center: {x: -0.000022334978, y: 0.00030802365, z: 0.009240166}
 --- !u!4 &1799052697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 95156386749963159, guid: 58db9492b6266324ab3d1404db8e7763, type: 3}
@@ -30933,7 +30673,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &1827067342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31007,7 +30746,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &1835818927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31184,9 +30922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &1875187977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31205,7 +30940,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1 &1879606790
 GameObject:
   m_ObjectHideFlags: 0
@@ -37797,8 +37531,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30DD\u30A4\u30F3\u30C8:0000"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
+  m_sharedMaterial: {fileID: 2998764088270197956, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
