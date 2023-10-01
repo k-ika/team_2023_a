@@ -5247,9 +5247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &125630517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5268,7 +5265,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1001 &126414019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11508,7 +11504,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &421648523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11748,7 +11743,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &450026608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17135,8 +17129,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Time
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
+  m_sharedMaterial: {fileID: 2998764088270197956, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17348,9 +17342,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &548060341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17369,7 +17360,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1 &557640116 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3841199001617980632, guid: 2583b25703ac3e44f89d86a532d24710, type: 3}
@@ -17413,9 +17403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &557640120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17434,7 +17421,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1001 &560002478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22401,8 +22387,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30B2\u30FC\u30E0\u306B\u623B\u308B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
+  m_sharedMaterial: {fileID: 2998764088270197956, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23564,8 +23550,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
+  m_sharedMaterial: {fileID: 2998764088270197956, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24179,8 +24165,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Finish!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
+  m_sharedMaterial: {fileID: 2998764088270197956, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24295,7 +24281,6 @@ MonoBehaviour:
   maxHealth: 1
   deathDelay: 3
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!4 &821090894 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6752912485720448932, guid: a56b9f9dea0011d4e9b57f9e4c107cd0, type: 3}
@@ -25094,7 +25079,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &977889857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26213,9 +26197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &1121725106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26234,7 +26215,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1001 &1124956865
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27090,8 +27070,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xD700"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
+  m_sharedMaterial: {fileID: 2998764088270197956, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -28489,9 +28469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &1386127137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28510,7 +28487,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1 &1392389353
 GameObject:
   m_ObjectHideFlags: 0
@@ -29948,7 +29924,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &1533397760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30317,7 +30292,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &1625012276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30674,9 +30648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &1668845864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30695,7 +30666,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!4 &1669710552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4889014678279035837, guid: 1bf2c047447ab174b90d65cfdc5652e9, type: 3}
@@ -30980,9 +30950,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &1742769277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31001,7 +30968,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1 &1762184768
 GameObject:
   m_ObjectHideFlags: 0
@@ -31197,7 +31163,6 @@ MonoBehaviour:
   maxHealth: 10
   deathDelay: 3
   score: 10
-  GameSystem: {fileID: 1646821217}
 --- !u!54 &1799052693
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -31363,7 +31328,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &1827067342
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31437,7 +31401,6 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
-  GameSystem: {fileID: 1646821217}
 --- !u!65 &1835818927
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31614,9 +31577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08b10a226157f9468e32f44bf87eb40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCamera: {fileID: 206145961}
-  yuubakubutus: {fileID: 1144422313}
-  yuubakubutuScript: {fileID: 800747929}
 --- !u!114 &1875187977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31635,7 +31595,6 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 10
   score: 0
-  GameSystem: {fileID: 1646821217}
 --- !u!1 &1879606790
 GameObject:
   m_ObjectHideFlags: 0
@@ -38068,8 +38027,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u30DD\u30A4\u30F3\u30C8:0000"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
+  m_sharedMaterial: {fileID: 2998764088270197956, guid: 0cf31a7c75b4b1a439b27a07aedc0a0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

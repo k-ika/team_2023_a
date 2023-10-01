@@ -13,7 +13,7 @@ public class BGMChanger : MonoBehaviour
     [SerializeField] private GameObject BGM2;
     void Start()
     {
-        
+        Invoke("StartBGM",0.1f);
     }
 
     void Update()
@@ -23,5 +23,10 @@ public class BGMChanger : MonoBehaviour
             BGM1.GetComponent<AudioSource>().Stop();
             BGM2.GetComponent<AudioSource>().Play();
         }
+    }
+
+    void StartBGM()
+    {
+        BGM1.GetComponent<AudioSource>().Play();
     }
 }
