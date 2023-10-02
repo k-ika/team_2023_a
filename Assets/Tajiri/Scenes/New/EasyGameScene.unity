@@ -5713,7 +5713,7 @@ GameObject:
   - component: {fileID: 166531932}
   - component: {fileID: 166531931}
   - component: {fileID: 166531930}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5872,7 +5872,7 @@ GameObject:
   - component: {fileID: 176337812}
   - component: {fileID: 176337811}
   - component: {fileID: 176337810}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: NextButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12284,21 +12284,21 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447704389}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.64462, y: 0.64462, z: 0.64462}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 19437243}
   - {fileID: 1927713521}
   - {fileID: 400658366}
-  m_Father: {fileID: 1089293218}
+  m_Father: {fileID: 1838178833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1300, y: 731.1853}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &447704391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25976,9 +25976,7 @@ RectTransform:
   - {fileID: 1792037296}
   - {fileID: 1392389354}
   - {fileID: 235279368}
-  - {fileID: 1136287972}
-  - {fileID: 447704390}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1838178833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -26551,7 +26549,7 @@ GameObject:
   - component: {fileID: 1136287971}
   - component: {fileID: 1136287970}
   - component: {fileID: 1136287969}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: AsobikataPanel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26628,21 +26626,21 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136287968}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.64462, y: 0.64462, z: 0.64462}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 166531929}
   - {fileID: 1278591267}
   - {fileID: 176337809}
-  m_Father: {fileID: 1089293218}
+  m_Father: {fileID: 1838178833}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1300, y: 731.1853}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1144422313
 GameObject:
   m_ObjectHideFlags: 0
@@ -27746,7 +27744,7 @@ GameObject:
   - component: {fileID: 1278591267}
   - component: {fileID: 1278591269}
   - component: {fileID: 1278591268}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Asobikata1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30794,6 +30792,40 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1838178832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1838178833}
+  m_Layer: 0
+  m_Name: Canvases
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1838178833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838178832}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1089293218}
+  - {fileID: 1136287972}
+  - {fileID: 447704390}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1868180863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37788,7 +37820,7 @@ SceneRoots:
   - {fileID: 1762184770}
   - {fileID: 231414602}
   - {fileID: 800747932}
-  - {fileID: 1089293218}
+  - {fileID: 1838178833}
   - {fileID: 94171358}
   - {fileID: 1144422314}
   - {fileID: 1646821226}

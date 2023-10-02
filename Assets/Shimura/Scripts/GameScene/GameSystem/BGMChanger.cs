@@ -13,7 +13,7 @@ public class BGMChanger : MonoBehaviour
     [SerializeField] private GameObject BGM2;
     void Start()
     {
-        
+
     }
 
     void Update()
