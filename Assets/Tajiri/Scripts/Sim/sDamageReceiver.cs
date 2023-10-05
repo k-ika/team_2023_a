@@ -44,5 +44,7 @@ public class sDamageReceiver : MonoBehaviour
         GameSystem.GetComponent<Score>().PlusScore(score);
         // オブジェクトの破壊など、必要な処理を追加
         Destroy(gameObject);
+        //破壊率のオブジェクト数に1足す
+        GameSystem.GetComponent<DestroyPercent>().PlusDestroyPer(1);
     }
 }

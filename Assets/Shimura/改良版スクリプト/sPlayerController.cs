@@ -52,5 +52,17 @@ public class sPlayerController : MonoBehaviour
         y_Rotation = y_Rotation * y_sensi;
         this.transform.Rotate(0, x_Rotation, 0);
         camera.transform.Rotate(-y_Rotation, 0, 0);
+        Vector3 cameraAngle = camera.transform.localEulerAngles;
+        if (cameraAngle.x < 280 && cameraAngle.x > 180)
+        {
+            cameraAngle.x = 280;
+        }
+        if (cameraAngle.x > 45 && cameraAngle.x < 180)
+        {
+            cameraAngle.x = 45;
+        }
+        cameraAngle.y = 0;
+        cameraAngle.z = 0;
+        camera.transform.localEulerAngles = cameraAngle;
     }
 }

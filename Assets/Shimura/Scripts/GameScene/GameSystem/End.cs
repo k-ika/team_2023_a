@@ -12,7 +12,7 @@ public class End : MonoBehaviour
 
     [SerializeField] GameObject timetext;
 
-    [Header("スコアの上限（すべてのオブジェクトのスコアの合計値）")] [SerializeField] int maxscore;
+    //[Header("スコアの上限（すべてのオブジェクトのスコアの合計値）")] [SerializeField] int maxscore;
 
     int s;
     int bl;
@@ -42,7 +42,7 @@ public class End : MonoBehaviour
         }
 
         //スコアが上限に達したらゲーム終了
-        if (GameSystem.GetComponent<Score>().sumscore == maxscore)
+        if (GameSystem.GetComponent<DestroyPercent>().percent == 100) //GameSystem.GetComponent<Score>().sumscore == maxscore
         {
             Invoke("EndPanelSet",1);
             Invoke("LoadResult",6);
