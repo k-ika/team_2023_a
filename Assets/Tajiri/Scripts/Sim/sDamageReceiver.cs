@@ -14,7 +14,7 @@ public class sDamageReceiver : MonoBehaviour
 
     [Header("スコア")] [SerializeField] int score;
 
-    //[SerializeField] GameObject GameSystem;
+    [Header("このオブジェクトの名前")] [SerializeField] string thisObjectname;
     GameObject GameSystem;
 
     private void Start()
@@ -46,5 +46,8 @@ public class sDamageReceiver : MonoBehaviour
         Destroy(gameObject);
         //破壊率のオブジェクト数に1足す
         GameSystem.GetComponent<DestroyPercent>().PlusDestroyPer(1);
+
+        //Logにポイントを表示させる
+        GameSystem.GetComponent<LogScript>().LogUpdater("\n+" + score + "(" + thisObjectname + ")");
     }
 }

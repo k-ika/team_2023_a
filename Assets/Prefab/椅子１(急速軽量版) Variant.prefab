@@ -154,3 +154,4 @@ MonoBehaviour:
   maxHealth: 5
   deathDelay: 1
   score: 5
+  thisObjectname: "\u6905\u5B50"

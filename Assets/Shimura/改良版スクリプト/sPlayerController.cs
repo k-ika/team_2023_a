@@ -9,12 +9,12 @@ public class sPlayerController : MonoBehaviour
     [Header("y方向の視点感度(3~7くらい)")] [SerializeField] float y_sensi; //これいじったらy方向の視点感度が変わる
     [Header("カメラ")] [SerializeField] new GameObject camera; //cameraにMainCamera入れといて
 
-    [Header("正のx座標の限界値")] [SerializeField] float pxLimit;
+    [Header("正のx座標の限界値")] public float pxLimit;
 
-    [Header("負のx座標の限界値")] [SerializeField] float nxLimit;
-    [Header("正のz座標の限界値")] [SerializeField] float pzLimit;
+    [Header("負のx座標の限界値")] public float nxLimit;
+    [Header("正のz座標の限界値")] public float pzLimit;
 
-    [Header("負のz座標の限界値")] [SerializeField] float nzLimit;
+    [Header("負のz座標の限界値")] public float nzLimit;
     void Start()
     {
     }

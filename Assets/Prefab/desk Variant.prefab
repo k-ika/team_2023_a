@@ -154,3 +154,4 @@ MonoBehaviour:
   maxHealth: 100
   deathDelay: 3
   score: 0
+  thisObjectname: "\u673A"

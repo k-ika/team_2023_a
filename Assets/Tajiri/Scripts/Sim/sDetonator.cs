@@ -21,7 +21,8 @@ public class sDetonator : MonoBehaviour
 
     [Header("スコア")] [SerializeField] int score;
 
-    //[SerializeField] GameObject GameSystem;
+    [Header("このオブジェクトの名前")] [SerializeField] string thisObjectname;
+
     GameObject GameSystem;
 
 
@@ -75,6 +76,8 @@ public class sDetonator : MonoBehaviour
         {
             //破壊率のオブジェクト数に1足す
             GameSystem.GetComponent<DestroyPercent>().PlusDestroyPer(1);
+            //Logにポイントを表示させる
+            GameSystem.GetComponent<LogScript>().LogUpdater("\n+" + score + "(" + thisObjectname + ")");
         }
     }
 
