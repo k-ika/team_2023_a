@@ -24759,6 +24759,7 @@ MonoBehaviour:
   explosionRadius: 5
   maxDamage: 50
   score: 50
+  thisObjectname: PC
 --- !u!114 &5030356131706526503
 MonoBehaviour:
   m_ObjectHideFlags: 0

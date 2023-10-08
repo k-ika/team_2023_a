@@ -9,12 +9,12 @@ public class sPlayerController : MonoBehaviour
     [Header("y方向の視点感度(3~7くらい)")] [SerializeField] float y_sensi; //これいじったらy方向の視点感度が変わる
     [Header("カメラ")] [SerializeField] new GameObject camera; //cameraにMainCamera入れといて
 
-    [Header("正のx座標の限界値")] [SerializeField] float pxLimit;
+    [Header("正のx座標の限界値")] public float pxLimit;
 
-    [Header("負のx座標の限界値")] [SerializeField] float nxLimit;
-    [Header("正のz座標の限界値")] [SerializeField] float pzLimit;
+    [Header("負のx座標の限界値")] public float nxLimit;
+    [Header("正のz座標の限界値")] public float pzLimit;
 
-    [Header("負のz座標の限界値")] [SerializeField] float nzLimit;
+    [Header("負のz座標の限界値")] public float nzLimit;
     void Start()
     {
     }
@@ -52,5 +52,17 @@ public class sPlayerController : MonoBehaviour
         y_Rotation = y_Rotation * y_sensi;
         this.transform.Rotate(0, x_Rotation, 0);
         camera.transform.Rotate(-y_Rotation, 0, 0);
+        Vector3 cameraAngle = camera.transform.localEulerAngles;
+        if (cameraAngle.x < 280 && cameraAngle.x > 180)
+        {
+            cameraAngle.x = 280;
+        }
+        if (cameraAngle.x > 45 && cameraAngle.x < 180)
+        {
+            cameraAngle.x = 45;
+        }
+        cameraAngle.y = 0;
+        cameraAngle.z = 0;
+        camera.transform.localEulerAngles = cameraAngle;
     }
 }

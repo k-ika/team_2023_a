@@ -18,11 +18,11 @@ namespace ExplosionSample
 
         private void Start()
         {
-            if (gameObject.transform.position.y > 0)
-            {
             // 一定時間経過後に発火
             Invoke(nameof(Explode), _time);
-            }
+
+            //このメソッドは、爆弾がステージ外で生成されたときの処理である
+            LimitPosition();
         }
 
         private void Explode()
@@ -61,6 +61,20 @@ namespace ExplosionSample
                     damageReceiver1.TakeDamage1(Mathf.RoundToInt(damage));
                 }
             }
+        }
+        void LimitPosition()
+        {
+            GameObject Player = GameObject.Find("Player");
+
+            Vector3 currentPos = transform.position;
+        
+            //追加　Mathf.ClampでX,Yの値それぞれが最小～最大の範囲内に収める。
+            //範囲を超えていたら範囲内の値を代入する
+            currentPos.x = Mathf.Clamp(currentPos.x, Player.GetComponent<sPlayerController>().nxLimit, Player.GetComponent<sPlayerController>().pxLimit);
+            currentPos.z = Mathf.Clamp(currentPos.z, Player.GetComponent<sPlayerController>().nzLimit, Player.GetComponent<sPlayerController>().pzLimit);
+            
+            //追加　positionをcurrentPosにする
+            transform.position = currentPos;
         }
     }
 }
