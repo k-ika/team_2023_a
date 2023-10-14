@@ -24280,7 +24280,7 @@ MonoBehaviour:
   mainSPEED: 0.04
   x_sensi: 3
   y_sensi: 3
-  camera: {fileID: 206145961}
+  Maincamera: {fileID: 206145961}
   pxLimit: 9
   nxLimit: -9
   pzLimit: 28

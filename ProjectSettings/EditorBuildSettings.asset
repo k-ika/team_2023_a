@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Tajiri/Scenes/DifficultySelectionScene.unity
-    guid: 370e1f3c166fe8f4cbb76c3736227593
-  - enabled: 0
     path: Assets/Tajiri/Scenes/Title.unity
     guid: 04950639631a9cf40aeef4644f699d65
   - enabled: 0

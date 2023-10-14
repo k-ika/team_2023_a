@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [Header("移動速度(0.04~0.1くらい)")] [SerializeField] float mainSPEED;　//mainspeedをいじったら移動速度が変わる
     [Header("x方向の視点感度(3~7くらい)")] [SerializeField] float x_sensi;　//これいじったらx方向の視点感度が変わる
     [Header("y方向の視点感度(3~7くらい)")] [SerializeField] float y_sensi;　//これいじったらy方向の視点感度が変わる
-    [Header("カメラ")] [SerializeField] new GameObject camera;　//cameraにMainCamera入れといて
+    [Header("カメラ")] [SerializeField] GameObject camera;　//cameraにMainCamera入れといて
     void Start()
     {
     }
