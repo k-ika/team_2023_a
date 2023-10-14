@@ -16,8 +16,13 @@ public class BombLeft : MonoBehaviour
     [SerializeField] private GameObject EndPanel;
 
     [SerializeField] private GameObject PausePanel;
+    [SerializeField] private GameObject BombRed;
+
     void Start()
     {
+        //ボムの画像の色を黒にする
+        BombRed.SetActive(false);
+        //ボムの残量を表示する
         bombtext.GetComponent<TextMeshProUGUI>().text = "×" + bombleft.ToString("D2");
     }
 
@@ -35,10 +40,15 @@ public class BombLeft : MonoBehaviour
                 {
                     bombleft -= 1;
                     bombtext.GetComponent<TextMeshProUGUI>().text = "×" + bombleft.ToString("D2");
+                    //ボムの画像を赤にする
+                    BombRed.SetActive(true);
+                    Invoke("BombImageChange",1.0f);
+
                     if (bombleft > redbombleft)
                     {
+                        //赤にする
                         bombtext.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.0f,0.0f,1.0f);
-                        Invoke("ChangeColor",1.0f);
+                        Invoke("BombLeftChangeColor",1.0f);
                     }
                     else
                     {
@@ -54,8 +64,14 @@ public class BombLeft : MonoBehaviour
         }
     }
 
-    void ChangeColor()
+    void BombLeftChangeColor()
     {
+        //白にする
         bombtext.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,1.0f,1.0f,1.0f);
+    }
+    void BombImageChange()
+    {
+        //ボムの画像を黒に戻す
+        BombRed.SetActive(false);
     }
 }
