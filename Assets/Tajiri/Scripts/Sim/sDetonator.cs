@@ -10,6 +10,7 @@ public class sDetonator : MonoBehaviour
     private int currentHealth; // 現在の体力
 
     [Header("爆風のPrefab")] [SerializeField] private DetonationalExplosion _explosionPrefab;
+    //private GameObject blast;
 
     // インスペクタウィンドウから設定可能な遅延時間
     [Header("死亡後の遅延時間（秒）")] [SerializeField] private float deathDelay = 3f;
@@ -33,6 +34,7 @@ public class sDetonator : MonoBehaviour
     {
         currentHealth = maxHealth; // ゲーム開始時に体力を最大値に設定
         GameSystem = GameObject.Find("GameSystem");
+        //blast = GameObject.Find("ExplosionForDetonator");
     }
 
 
@@ -60,9 +62,9 @@ public class sDetonator : MonoBehaviour
     // 爆発をトリガーするメソッド
     private void Explode3()
     {
-        // 爆風のプレハブを生成
+        // 爆発を生成
         var explosion = Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
-            explosion.Explode();
+        explosion.Explode();
 
         Explode1();    
 

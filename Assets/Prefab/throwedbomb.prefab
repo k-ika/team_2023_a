@@ -39211,7 +39211,7 @@ GameObject:
   - component: {fileID: 7637750906022346423}
   - component: {fileID: 6982315620629089037}
   m_Layer: 0
-  m_Name: Throwedbomb
+  m_Name: throwedbomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
