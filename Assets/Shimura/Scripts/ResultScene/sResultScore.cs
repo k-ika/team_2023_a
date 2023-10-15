@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using unityroom.Api;
 
-public class sTajiriResultScore : MonoBehaviour
+public class sResultScore : MonoBehaviour
 {
     int score;
     int bombleft;

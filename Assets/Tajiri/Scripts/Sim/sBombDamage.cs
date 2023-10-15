@@ -6,10 +6,9 @@ namespace ExplosionSample
 {
     public class sBombDamage : MonoBehaviour
     {
-        //[Header("爆発までの時間[s]")] [SerializeField]
-        //private float _time = 3.0f;
 
         [Header("爆風のPrefab")] [SerializeField] private Explosion _explosionPrefab;
+        //GameObject blast;
 
         [Header("爆風の範囲")] [SerializeField] private float explosionRadius = 5f;
 
@@ -18,16 +17,17 @@ namespace ExplosionSample
 
         private void Start()
         {
-            // 一定時間経過後に発火
-            //Invoke(nameof(Explode), _time);
+            //blast = GameObject.Find("ExplosionForDetonator");
         }
 
-        //private void Explode()
         void OnCollisionEnter(Collision collision)
         {
             // 爆発を生成
             var explosion = Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
             explosion.Explode();
+            // 爆発を生成
+            //Instantiate(blast, transform.position, Quaternion.identity);
+            //blast.GetComponent<Explosion>().Explode();
 
             Explode1();
             

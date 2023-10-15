@@ -23,44 +23,55 @@ public class BombLeft : MonoBehaviour
         //ボムの画像の色を黒にする
         BombRed.SetActive(false);
         //ボムの残量を表示する
-        bombtext.GetComponent<TextMeshProUGUI>().text = "×" + bombleft.ToString("D2");
+        if (bombleft > 1000)
+        {
+            bombtext.GetComponent<TextMeshProUGUI>().text = "×∞";
+        }
+        else
+        {
+            bombtext.GetComponent<TextMeshProUGUI>().text = "×" + bombleft.ToString("D2");
+        }
+        
     }
 
     void Update()
     {
-        if (bombleft > -1)
+        if (bombleft < 500)
         {
-            if (StartPanel.activeSelf || EndPanel.activeSelf || PausePanel.activeSelf)
+                if (bombleft > -1)
             {
-
-            }
-            else
-            {
-                if (Input.GetMouseButtonUp(0))
+                if (StartPanel.activeSelf || EndPanel.activeSelf || PausePanel.activeSelf)
                 {
-                    bombleft -= 1;
-                    bombtext.GetComponent<TextMeshProUGUI>().text = "×" + bombleft.ToString("D2");
-                    //ボムの画像を赤にする
-                    BombRed.SetActive(true);
-                    Invoke("BombImageChange",1.0f);
 
-                    if (bombleft > redbombleft)
+                }
+                else
+                {
+                    if (Input.GetMouseButtonUp(0))
                     {
-                        //赤にする
-                        bombtext.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.0f,0.0f,1.0f);
-                        Invoke("BombLeftChangeColor",1.0f);
-                    }
-                    else
-                    {
-                        bombtext.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.0f,0.0f,1.0f);
+                        bombleft -= 1;
+                        bombtext.GetComponent<TextMeshProUGUI>().text = "×" + bombleft.ToString("D2");
+                        //ボムの画像を赤にする
+                        BombRed.SetActive(true);
+                        Invoke("BombImageChange",1.0f);
+
+                        if (bombleft > redbombleft)
+                        {
+                            //赤にする
+                            bombtext.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.0f,0.0f,1.0f);
+                            Invoke("BombLeftChangeColor",1.0f);
+                        }
+                        else
+                        {
+                            bombtext.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.0f,0.0f,1.0f);
+                        }
                     }
                 }
             }
-        }
 
-        else 
-        {
-            bombtext.GetComponent<TextMeshProUGUI>().text = "×00";
+            else 
+            {
+                bombtext.GetComponent<TextMeshProUGUI>().text = "×00";
+            }
         }
     }
 
