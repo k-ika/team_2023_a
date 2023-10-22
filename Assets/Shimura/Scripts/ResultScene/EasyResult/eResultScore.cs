@@ -4,14 +4,14 @@ using UnityEngine;
 using TMPro;
 using unityroom.Api;
 
-public class sTajiriResultScore : MonoBehaviour
+public class eResultScore : MonoBehaviour
 {
     int score;
-    int bombleft;
+    //int bombleft;
     float timeleft;
     public int sumscore;
 
-    [Header("爆弾残量の倍率")] [SerializeField] int multipliedbomb;
+    //[Header("爆弾残量の倍率")] [SerializeField] int multipliedbomb;
 
     [Header("残り時間の倍率")] [SerializeField] int multipliedtime;
 
@@ -27,7 +27,7 @@ public class sTajiriResultScore : MonoBehaviour
 
     [SerializeField] private GameObject ScoreText;
 
-    [SerializeField] private GameObject BombLeftText;
+    //[SerializeField] private GameObject BombLeftText;
 
     [SerializeField] private GameObject TimeLeftText;
 
@@ -44,23 +44,23 @@ public class sTajiriResultScore : MonoBehaviour
     {
         //セーブデータをロード
         score = PlayerPrefs.GetInt("score", 0);
-        bombleft = PlayerPrefs.GetInt("bombleft", 0);
+        //bombleft = PlayerPrefs.GetInt("bombleft", 0);
         timeleft = PlayerPrefs.GetFloat("timeleft", 0);
         //テキストを非表示に
         ResultText.SetActive(false);
         ScoreText.SetActive(false);
-        BombLeftText.SetActive(false);
+        //BombLeftText.SetActive(false);
         TimeLeftText.SetActive(false);
         SumScoreText.SetActive(false);
         RankText.SetActive(false);
         //何秒かごとに表示させていく
         Invoke("DisplayResultText",1);
         Invoke("DisplayScoretext",2);
-        Invoke("DisplayBombLeftText",3);
-        Invoke("DisplayTimeLeftText",4);
-        Invoke("DisplaySumScoreText",5);
-        Invoke("DisplayRankText",5);
-        Invoke("SaveDestroy",5);
+        //Invoke("DisplayBombLeftText",3);
+        Invoke("DisplayTimeLeftText",3);
+        Invoke("DisplaySumScoreText",4);
+        Invoke("DisplayRankText",4);
+        Invoke("SaveDestroy",4);
     }
 
 
@@ -82,12 +82,12 @@ public class sTajiriResultScore : MonoBehaviour
 
 
     //爆弾残量を表示、音を出す
-    void DisplayBombLeftText()
-    {
-        BombLeftText.GetComponent<TextMeshProUGUI>().text = "爆弾残量:" + bombleft.ToString("D2");
-        BombLeftText.SetActive(true);
-        SE.GetComponent<AudioSource>().Play();
-    }
+    //void DisplayBombLeftText()
+    //{
+    //    BombLeftText.GetComponent<TextMeshProUGUI>().text = "爆弾残量:" + bombleft.ToString("D2");
+    //    BombLeftText.SetActive(true);
+    //   SE.GetComponent<AudioSource>().Play();
+    //}
 
     //残り時間を表示し、音を出す
     void DisplayTimeLeftText()
@@ -103,7 +103,8 @@ public class sTajiriResultScore : MonoBehaviour
         //残り時間を四捨五入して整数型に
         int t = Mathf.RoundToInt(timeleft);
         //合計スコアの計算式
-        sumscore = score + bombleft * multipliedbomb + t * multipliedtime;
+        //sumscore = score + bombleft * multipliedbomb + t * multipliedtime;
+        sumscore = score + t * multipliedtime;
 
         SumScoreText.GetComponent<TextMeshProUGUI>().text = "合計スコア:" + sumscore.ToString("D4");
         SumScoreText.SetActive(true);
@@ -142,9 +143,9 @@ public class sTajiriResultScore : MonoBehaviour
     void SaveDestroy()
     {
         //ボードNo1にsumscoreを送信する。
-        UnityroomApiClient.Instance.SendScore(1, sumscore, ScoreboardWriteMode.Always);
+        //UnityroomApiClient.Instance.SendScore(1, sumscore, ScoreboardWriteMode.Always);
         //ボードNo2にscore（ポイント）を送信する。
-        UnityroomApiClient.Instance.SendScore(2, score, ScoreboardWriteMode.Always);
+        UnityroomApiClient.Instance.SendScore(2, sumscore, ScoreboardWriteMode.Always);
         // 全てのキーとデータを削除
         PlayerPrefs.DeleteAll();
     }

@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using unityroom.Api;
 
 public class ResultScore : MonoBehaviour
 {
     int score;
     int bombleft;
     float timeleft;
+
+    int sumscore;
 
     [Header("爆弾残量の倍率")] [SerializeField] int multipliedbomb;
 
@@ -80,15 +83,19 @@ public class ResultScore : MonoBehaviour
         //残り時間を四捨五入して整数型に
         int t = Mathf.RoundToInt(timeleft);
         //合計スコアの計算式
-        int sumscore = score + bombleft * multipliedbomb + t * multipliedtime;
+        sumscore = score + bombleft * multipliedbomb + t * multipliedtime;
 
         SumScoreText.GetComponent<TextMeshProUGUI>().text = "SumScore:" + sumscore.ToString("D4");
         SumScoreText.SetActive(true);
         SE2.GetComponent<AudioSource>().Play();
     }
-
+    //UnityRoomのスコアボードに送信し、Unityの中のセーブデータは消去する
     void SaveDestroy()
     {
+        //ボードNo1にsumscoreを送信する。
+        UnityroomApiClient.Instance.SendScore(1, sumscore, ScoreboardWriteMode.Always);
+        //ボードNo2にscore（ポイント）を送信する。
+        UnityroomApiClient.Instance.SendScore(2, score, ScoreboardWriteMode.Always);
         // 全てのキーとデータを削除
         PlayerPrefs.DeleteAll();
     }

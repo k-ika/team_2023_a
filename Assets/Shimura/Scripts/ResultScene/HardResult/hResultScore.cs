@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using unityroom.Api;
 
-public class sTajiriResultScore : MonoBehaviour
+public class hResultScore : MonoBehaviour
 {
     int score;
     int bombleft;
@@ -144,7 +144,7 @@ public class sTajiriResultScore : MonoBehaviour
         //ボードNo1にsumscoreを送信する。
         UnityroomApiClient.Instance.SendScore(1, sumscore, ScoreboardWriteMode.Always);
         //ボードNo2にscore（ポイント）を送信する。
-        UnityroomApiClient.Instance.SendScore(2, score, ScoreboardWriteMode.Always);
+        //UnityroomApiClient.Instance.SendScore(2, score, ScoreboardWriteMode.Always);
         // 全てのキーとデータを削除
         PlayerPrefs.DeleteAll();
     }
