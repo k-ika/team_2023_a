@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     [Header("x方向の視点感度(3~7くらい)")] [SerializeField] float x_sensi;　//これいじったらx方向の視点感度が変わる
     [Header("y方向の視点感度(3~7くらい)")] [SerializeField] float y_sensi;　//これいじったらy方向の視点感度が変わる
     [Header("カメラ")] [SerializeField] GameObject Maincamera;　//cameraにMainCamera入れといて
+    float time;
+
     void Start()
     {
     }

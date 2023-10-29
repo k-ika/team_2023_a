@@ -7,7 +7,7 @@ public class RayYuubakubutu : MonoBehaviour
     [SerializeField] GameObject     MainCamera;             
     [Header("誘爆物が持てる有効距離")] [SerializeField] float      distance = 0.8f;   
     [Header("持つ手")] public GameObject hand;
-
+    [Header("でかい誘爆物を入れるオブジェクト")] public GameObject BigYuubakubutuBox;
     [SerializeField] GameObject crosshair;
 
     // Hitしたオブジェクト格納用
@@ -66,6 +66,27 @@ public class RayYuubakubutu : MonoBehaviour
                     HittedObject.transform.parent = MainCamera.transform;
                     //HitしたオブジェクトについているRigidbodyを削除する
                     Destroy(HittedObject.GetComponent<Rigidbody>());
+
+                }
+            }
+
+            //検出したオブジェクトのタグが"BigDetonator"のとき
+            if (raycastHit.collider.CompareTag("BigYuubakubutu"))
+            {
+                //クロスヘアを一旦非表示にする
+                crosshair.SetActive(false);
+
+                //右クリックしているとき
+                if (Input.GetMouseButtonDown(1))
+                {   
+                    //Hitしたオブジェクトの名前を変える
+                    GameObject HittedObject = raycastHit.collider.gameObject;
+                    //Hitしたオブジェクトに右手の座標を代入
+                    HittedObject.transform.position = BigYuubakubutuBox.transform.position;
+                    //親子関係を作る（親：カメラ、子：HittedObject）
+                    HittedObject.transform.parent = BigYuubakubutuBox.transform;
+                    //HitしたオブジェクトについているRigidbodyを削除する
+                    //Destroy(HittedObject.GetComponent<Rigidbody>());
 
                 }
             }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class sPlayerController : MonoBehaviour
 {
-    [Header("移動速度(0.04~0.1くらい)")] [SerializeField] float mainSPEED; //mainspeedをいじったら移動速度が変わる
+    [Header("移動速度(0.04~0.1くらい)")] public float mainSPEED; //mainspeedをいじったら移動速度が変わる
     [Header("x方向の視点感度(3~7くらい)")] [SerializeField] float x_sensi; //これいじったらx方向の視点感度が変わる
     [Header("y方向の視点感度(3~7くらい)")] [SerializeField] float y_sensi; //これいじったらy方向の視点感度が変わる
     [Header("カメラ")] [SerializeField] GameObject Maincamera; //cameraにMainCamera入れといて
@@ -15,14 +15,20 @@ public class sPlayerController : MonoBehaviour
     [Header("正のz座標の限界値")] public float pzLimit;
 
     [Header("負のz座標の限界値")] public float nzLimit;
+    float time;
     void Start()
     {
     }
  
     void Update()
     {
-        movecon();
-        cameracon();
+        time += Time.deltaTime;
+        if(time >= 0.005f)
+        {
+            movecon();
+            cameracon();
+            time = 0f;
+        }
     }
  
     void movecon()
