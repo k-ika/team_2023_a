@@ -36,7 +36,9 @@ public class BigYuubakubutu : MonoBehaviour
                 //Hitしたオブジェクトのrotationを0に
                 //gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
                 //このオブジェクトにRigidbodyをつける
-                //gameObject.AddComponent<Rigidbody>();               
+                //gameObject.AddComponent<Rigidbody>();     
+                //移動速度を遅くする
+                Player.GetComponent<sPlayerController>().mainSPEED *= 2.0f;          
                 }
             }
         }

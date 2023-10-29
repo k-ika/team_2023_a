@@ -5,7 +5,7 @@ using UnityEngine;
 public class RayYuubakubutu : MonoBehaviour
 {
     [SerializeField] GameObject     MainCamera;             
-    [Header("誘爆物が持てる有効距離")] [SerializeField] float      distance = 0.8f;   
+    [Header("誘爆物が持てる有効距離")] [SerializeField] float distance = 0.8f;   
     [Header("持つ手")] public GameObject hand;
     [Header("でかい誘爆物を入れるオブジェクト")] public GameObject BigYuubakubutuBox;
     [SerializeField] GameObject crosshair;
@@ -87,6 +87,8 @@ public class RayYuubakubutu : MonoBehaviour
                     HittedObject.transform.parent = BigYuubakubutuBox.transform;
                     //HitしたオブジェクトについているRigidbodyを削除する
                     //Destroy(HittedObject.GetComponent<Rigidbody>());
+                    //移動速度を遅くする
+                    this.gameObject.GetComponent<sPlayerController>().mainSPEED *= 0.5f;
 
                 }
             }
