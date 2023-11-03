@@ -16,12 +16,25 @@ public class sDamageReceiver : MonoBehaviour
 
     [Header("このオブジェクトの名前")] [SerializeField] string thisObjectname;
     GameObject GameSystem;
-
     private void Start()
     {
         currentHealth = maxHealth; // ゲーム開始時に体力を最大値に設定
         GameSystem = GameObject.Find("GameSystem");
     }
+
+    void Update()
+    {
+        Vector3 currentPos = transform.position;
+    
+        //追加　Mathf.ClampでX,Yの値それぞれが最小～最大の範囲内に収める。
+        //範囲を超えていたら範囲内の値を代入する
+        currentPos.x = Mathf.Clamp(currentPos.x, GameSystem.GetComponent<LimitObjects>().nxoLimit, GameSystem.GetComponent<LimitObjects>().pxoLimit);
+        currentPos.z = Mathf.Clamp(currentPos.z, GameSystem.GetComponent<LimitObjects>().nzoLimit, GameSystem.GetComponent<LimitObjects>().pzoLimit);
+        
+        //追加　positionをcurrentPosにする
+        transform.position = currentPos;
+    }
+
 
     // ダメージを受けたときの処理
     public void TakeDamage(int damage)
