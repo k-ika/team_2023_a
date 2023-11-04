@@ -14,25 +14,30 @@ namespace ExplosionSample
 
         // maxDamage フィールドをインスペクタから設定できるようにpublicに変更
         [Header("最大ダメージ")] [SerializeField] private float maxDamage = 50f;
+        GameObject Righthand;
 
         private void Start()
         {
             //blast = GameObject.Find("ExplosionForDetonator");
+            Righthand = GameObject.Find("Righthand");
         }
 
         void OnCollisionEnter(Collision collision)
         {
-            // 爆発を生成
-            var explosion = Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
-            explosion.Explode();
-            // 爆発を生成
-            //Instantiate(blast, transform.position, Quaternion.identity);
-            //blast.GetComponent<Explosion>().Explode();
+            if (gameObject.transform.parent == null)
+            {
+                // 爆発を生成
+                var explosion = Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+                explosion.Explode();
+                // 爆発を生成
+                //Instantiate(blast, transform.position, Quaternion.identity);
+                //blast.GetComponent<Explosion>().Explode();
 
-            Explode1();
-            
-            // 自身は消える
-            Destroy(this.gameObject);
+                Explode1();
+                
+                // 自身は消える
+                Destroy(this.gameObject);
+            }
         }
 
         private void Explode1()

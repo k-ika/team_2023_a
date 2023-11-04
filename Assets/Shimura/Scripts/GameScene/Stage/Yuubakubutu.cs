@@ -28,17 +28,12 @@ public class Yuubakubutu : MonoBehaviour
 
                 if (Player.GetComponent<RayYuubakubutu>().raycastHit.point.x != 0f && Player.GetComponent<RayYuubakubutu>().raycastHit.point.y != 0f && Player.GetComponent<RayYuubakubutu>().raycastHit.point.z != 0f)
                 {
-                //Debug.Log(yuubakubutuScript.raycastHit.point);
-
-                //Debug.Log("離した！");
-                //HitしたオブジェクトにRayが当たっている座標を代入する  //gameObject.transform.position = yuubakubutuScript.raycastHit.point;
-                gameObject.transform.position = Player.GetComponent<RayYuubakubutu>().raycastHit.point;
-                //親子関係を解除
-                gameObject.transform.parent = yuubakubutus.transform;
-                //Hitしたオブジェクトのrotationを0に
-                gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-                //このオブジェクトにRigidbodyをつける
-                gameObject.AddComponent<Rigidbody>();               
+                    //HitしたオブジェクトにRayが当たっている座標を代入する  //gameObject.transform.position = yuubakubutuScript.raycastHit.point;
+                    gameObject.transform.position = Player.GetComponent<RayYuubakubutu>().raycastHit.point;
+                    //親子関係を解除
+                    gameObject.transform.parent = yuubakubutus.transform;
+                    //このオブジェクトにRigidbodyをつける
+                    gameObject.AddComponent<Rigidbody>();               
                 }
             }
         }

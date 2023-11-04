@@ -23,10 +23,7 @@ public class sDetonator : MonoBehaviour
     [Header("スコア")] [SerializeField] int score;
 
     [Header("このオブジェクトの名前")] [SerializeField] string thisObjectname;
-
     GameObject GameSystem;
-
-
 
 
 
@@ -37,7 +34,18 @@ public class sDetonator : MonoBehaviour
         //blast = GameObject.Find("ExplosionForDetonator");
     }
 
-
+    void Update()
+    {
+        Vector3 currentPos = transform.position;
+    
+        //追加　Mathf.ClampでX,Yの値それぞれが最小～最大の範囲内に収める。
+        //範囲を超えていたら範囲内の値を代入する
+        currentPos.x = Mathf.Clamp(currentPos.x, GameSystem.GetComponent<LimitObjects>().nxoLimit, GameSystem.GetComponent<LimitObjects>().pxoLimit);
+        currentPos.z = Mathf.Clamp(currentPos.z, GameSystem.GetComponent<LimitObjects>().nzoLimit, GameSystem.GetComponent<LimitObjects>().pzoLimit);
+        
+        //追加　positionをcurrentPosにする
+        transform.position = currentPos;
+    }
 
 
 
@@ -73,8 +81,8 @@ public class sDetonator : MonoBehaviour
         //GameSystemにScoreを足す
         GameSystem.GetComponent<Score>().PlusScore(score);
 
-        //自身のタグがYuubakubutuのとき
-        if (gameObject.GetComponent<Collider>().CompareTag("Yuubakubutu"))
+        //自身のタグがYuubakubutuかBigYuubakubutuのとき
+        if (gameObject.GetComponent<Collider>().CompareTag("Yuubakubutu") || gameObject.GetComponent<Collider>().CompareTag("BigYuubakubutu"))
         {
             //破壊率のオブジェクト数に1足す
             GameSystem.GetComponent<DestroyPercent>().PlusDestroyPer(1);

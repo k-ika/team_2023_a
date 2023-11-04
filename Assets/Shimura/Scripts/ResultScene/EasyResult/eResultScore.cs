@@ -34,6 +34,7 @@ public class eResultScore : MonoBehaviour
     [SerializeField] private GameObject SumScoreText;
 
     [SerializeField] private GameObject RankText;
+    [SerializeField] private GameObject madeText;
 
     [SerializeField] private GameObject SE;
 
@@ -53,6 +54,7 @@ public class eResultScore : MonoBehaviour
         TimeLeftText.SetActive(false);
         SumScoreText.SetActive(false);
         RankText.SetActive(false);
+        madeText.SetActive(false);
         //何秒かごとに表示させていく
         Invoke("DisplayResultText",1);
         Invoke("DisplayScoretext",2);
@@ -111,31 +113,38 @@ public class eResultScore : MonoBehaviour
         SE2.GetComponent<AudioSource>().Play();
     }
 
-    //合計スコアに応じてランクを判定し、表示
     void DisplayRankText()
     {
+        int madeScore;
         if (sumscore >= Srank)
         {
             RankText.GetComponent<TextMeshProUGUI>().text = "Sランク";
+            madeText.GetComponent<TextMeshProUGUI>().text = "";
         }
 
         else if (sumscore >= Arank)
         {
             RankText.GetComponent<TextMeshProUGUI>().text = "Aランク";
+            madeScore = Srank - sumscore;
+            madeText.GetComponent<TextMeshProUGUI>().text = "Sランクまであと" + madeScore + "点";
         }
 
         else if (sumscore >= Brank)
         {
             RankText.GetComponent<TextMeshProUGUI>().text = "Bランク";
+            madeScore = Arank - sumscore;
+            madeText.GetComponent<TextMeshProUGUI>().text = "Aランクまであと" + madeScore + "点";
         }
 
         else if (sumscore < Crank)
         {
             RankText.GetComponent<TextMeshProUGUI>().text = "Cランク";
+            madeScore = Brank - sumscore;
+            madeText.GetComponent<TextMeshProUGUI>().text = "Bランクまであと" + madeScore + "点";
         }
 
         RankText.SetActive(true);
-
+        madeText.SetActive(true);
     }
 
 

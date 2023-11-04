@@ -22421,6 +22421,7 @@ MonoBehaviour:
   throwedbomb: {fileID: 7006753159489937640, guid: 512cf38a5a639144ca815bbc61a69f21, type: 3}
   fallpoint: {fileID: 1451514777}
   throwpoint: {fileID: 1887633552}
+  Yajirusi: {fileID: 0}
   thrust: 15
   GameSystem: {fileID: 1646821217}
 --- !u!4 &800747932
@@ -23464,8 +23465,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: BGM
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -24463,8 +24464,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: SE
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 970d062a79887d549995d743b57ae020, type: 2}
-  m_sharedMaterial: {fileID: 2998764088270197956, guid: 970d062a79887d549995d743b57ae020, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -25195,6 +25196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timetext: {fileID: 504909352}
   BGM1: {fileID: 1183749606}
+  BGM1Loop: {fileID: 0}
   BGM2: {fileID: 1879606790}
 --- !u!114 &1646821229
 MonoBehaviour:
