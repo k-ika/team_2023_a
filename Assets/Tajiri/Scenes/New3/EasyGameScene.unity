@@ -23842,7 +23842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abfbe1f02613429488e92efa53fb7bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: f4b53e511f06fb0418bd471d1f6d29f3, type: 2}
+  audioMixer: {fileID: 24100000, guid: f9bcae072a2d01e45ad3feeccb9d0eb8, type: 2}
   bGMSlider: {fileID: 197488386}
   sESlider: {fileID: 639409670}
 --- !u!4 &686628765
@@ -24570,6 +24570,7 @@ MonoBehaviour:
   MainCamera: {fileID: 206145961}
   distance: 5
   hand: {fileID: 460700448}
+  BigYuubakubutuBox: {fileID: 0}
   crosshair: {fileID: 1454295486}
 --- !u!114 &800747930
 MonoBehaviour:
@@ -24644,7 +24645,7 @@ MonoBehaviour:
   mainSPEED: 0.04
   x_sensi: 3
   y_sensi: 3
-  camera: {fileID: 206145961}
+  Maincamera: {fileID: 0}
   pxLimit: 9
   nxLimit: -9
   pzLimit: 28
