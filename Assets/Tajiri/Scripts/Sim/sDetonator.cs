@@ -81,8 +81,8 @@ public class sDetonator : MonoBehaviour
         //GameSystemにScoreを足す
         GameSystem.GetComponent<Score>().PlusScore(score);
 
-        //自身のタグがYuubakubutuのとき
-        if (gameObject.GetComponent<Collider>().CompareTag("Yuubakubutu"))
+        //自身のタグがYuubakubutuかBigYuubakubutuのとき
+        if (gameObject.GetComponent<Collider>().CompareTag("Yuubakubutu") || gameObject.GetComponent<Collider>().CompareTag("BigYuubakubutu"))
         {
             //破壊率のオブジェクト数に1足す
             GameSystem.GetComponent<DestroyPercent>().PlusDestroyPer(1);

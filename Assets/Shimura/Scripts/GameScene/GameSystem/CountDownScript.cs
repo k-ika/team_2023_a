@@ -12,6 +12,9 @@ public class CountDownScript : MonoBehaviour
     [SerializeField] GameObject StartPanel;
     void Start()
     {
+        //FPSを30に固定
+        //Application.targetFrameRate = 30;
+
         StartPanel.SetActive(true);
 
         // 全てのキーとデータを削除

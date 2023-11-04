@@ -8,11 +8,6 @@ public class DestroyPercent : MonoBehaviour
     [SerializeField] GameObject DestroyPertext;
 
     private int numObject = 0;
-
-    private GameObject[] yuubakubutus;
-
-    private GameObject[] items;
-
     private int numDestroyOb;
 
     [Header("0のままで")] public float percent;
@@ -22,8 +17,10 @@ public class DestroyPercent : MonoBehaviour
         GameObject[] yuubakubutus = GameObject.FindGameObjectsWithTag("Yuubakubutu");
         //配列itemsにすべての物や誘爆物を入れる
         GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
+        //配列Bigyuubakubutusにすべての物や誘爆物を入れる
+        GameObject[] BigYuubakubutus = GameObject.FindGameObjectsWithTag("BigYuubakubutu");
 
-        numObject = yuubakubutus.Length + items.Length; 
+        numObject = yuubakubutus.Length + items.Length + BigYuubakubutus.Length; 
         //テキストの文章を始めに指定
         DestroyPertext.GetComponent<TextMeshProUGUI>().text = "破壊率:0/" + numObject.ToString("D2") + "(0%)";
     }
