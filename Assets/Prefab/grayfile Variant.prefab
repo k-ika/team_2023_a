@@ -152,6 +152,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  deathDelay: 3
+  deathDelay: 1
   score: 5
   thisObjectname: "\u767D\u3044\u30D5\u30A1\u30A4\u30EB"

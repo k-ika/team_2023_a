@@ -28571,6 +28571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: uploads_files_4335498_z-+door
       objectReference: {fileID: 0}
+    - target: {fileID: 2382799219754379413, guid: 085e8bf5455f6194fb7cf7d824e69b94, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -3973107660126017756, guid: 085e8bf5455f6194fb7cf7d824e69b94, type: 3}

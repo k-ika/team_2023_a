@@ -131,9 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
-  deathDelay: 2
-  score: 1
-  thisObjectname: Pen1
+  deathDelay: 1
+  score: 3
+  thisObjectname: "\u30DE\u30FC\u30AB\u30FC\u30DA\u30F3"
 --- !u!65 &5402158736405122190
 BoxCollider:
   m_ObjectHideFlags: 0
