@@ -13,7 +13,7 @@ public class BGMChanger : MonoBehaviour
     [SerializeField] private GameObject BGM2;
     void Start()
     {
-        Invoke("BGMLoop", 61);
+        Invoke("BGMLoop", 56);
     }
 
     void Update()
