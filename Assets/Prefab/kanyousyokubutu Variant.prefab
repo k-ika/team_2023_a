@@ -136,6 +136,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  deathDelay: 3
+  deathDelay: 1
   score: 10
   thisObjectname: "\u89B3\u8449\u690D\u7269"

@@ -39345,4 +39345,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _explosionPrefab: {fileID: 992186708270034512}
   explosionRadius: 5
-  maxDamage: 100
+  maxDamage: 50

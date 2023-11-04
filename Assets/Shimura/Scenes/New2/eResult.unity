@@ -2335,10 +2335,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sumscore: 0
   multipliedtime: 1
-  Srank: 1800
-  Arank: 1700
-  Brank: 1600
-  Crank: 1600
+  Srank: 4530
+  Arank: 4520
+  Brank: 4436
+  Crank: 4436
   ResultText: {fileID: 1359699012}
   ScoreText: {fileID: 1101151626}
   TimeLeftText: {fileID: 234528375}

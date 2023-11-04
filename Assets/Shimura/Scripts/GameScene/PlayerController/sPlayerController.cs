@@ -5,6 +5,7 @@ using UnityEngine;
 public class sPlayerController : MonoBehaviour
 {
     [Header("移動速度(0.04~0.1くらい)")] public float mainSPEED; //mainspeedをいじったら移動速度が変わる
+    [Header("走るときの倍率")] [SerializeField] float runSPEED;
     [Header("x方向の視点感度(3~7くらい)")] [SerializeField] float x_sensi; //これいじったらx方向の視点感度が変わる
     [Header("y方向の視点感度(3~7くらい)")] [SerializeField] float y_sensi; //これいじったらy方向の視点感度が変わる
     [Header("カメラ")] [SerializeField] GameObject Maincamera; //cameraにMainCamera入れといて
@@ -16,8 +17,11 @@ public class sPlayerController : MonoBehaviour
 
     [Header("負のz座標の限界値")] public float nzLimit;
     float time;
+
+    float runspeed;
     void Start()
     {
+        runspeed = 1.0f;
     }
  
     void Update()
@@ -33,10 +37,20 @@ public class sPlayerController : MonoBehaviour
  
     void movecon()
     {
+        if (Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift))
+        {
+            runspeed = runSPEED;
+        }
+
+        if (Input.GetKeyUp(KeyCode.RightShift) || Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            runspeed = 1.0f;
+        }
+
         Transform trans = transform;  
         transform.position = trans.position;  //23,24行目は何書いてるか分かれへん
-        trans.position += trans.TransformDirection(Vector3.forward) * Input.GetAxis("Vertical") * mainSPEED;
-        trans.position += trans.TransformDirection(Vector3.right) * Input.GetAxis("Horizontal") * mainSPEED;
+        trans.position += trans.TransformDirection(Vector3.forward) * Input.GetAxis("Vertical") * mainSPEED * runspeed;
+        trans.position += trans.TransformDirection(Vector3.right) * Input.GetAxis("Horizontal") * mainSPEED * runspeed;
 
         //追加　現在のポジションを保持する
         Vector3 currentPos = transform.position;
@@ -48,6 +62,8 @@ public class sPlayerController : MonoBehaviour
         
         //追加　positionをcurrentPosにする
         transform.position = currentPos;
+
+        
     }
  
     void cameracon()

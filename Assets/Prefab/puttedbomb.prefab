@@ -39346,4 +39346,4 @@ MonoBehaviour:
   _time: 3
   _explosionPrefab: {fileID: 6243796742358232859}
   explosionRadius: 5
-  maxDamage: 100
+  maxDamage: 50

@@ -149,7 +149,7 @@ AudioSource:
   m_GameObject: {fileID: 8105350}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4991537151440460824, guid: f9bcae072a2d01e45ad3feeccb9d0eb8, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.05
@@ -371,7 +371,7 @@ AudioSource:
   m_GameObject: {fileID: 44811364}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6202467435748489166, guid: f9bcae072a2d01e45ad3feeccb9d0eb8, type: 2}
   m_audioClip: {fileID: 8300000, guid: ad8c9cf163c003b428073fa70b5a249c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05
@@ -2468,12 +2468,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sumscore: 0
-  multipliedbomb: 1
+  multipliedbomb: 100
   multipliedtime: 1
-  Srank: 1700
-  Arank: 1600
-  Brank: 1500
-  Crank: 1500
+  Srank: 4720
+  Arank: 4620
+  Brank: 4430
+  Crank: 4430
   ResultText: {fileID: 1359699012}
   ScoreText: {fileID: 1101151626}
   BombLeftText: {fileID: 1265919534}
@@ -4070,7 +4070,7 @@ AudioSource:
   m_GameObject: {fileID: 1869875721}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 6202467435748489166, guid: f9bcae072a2d01e45ad3feeccb9d0eb8, type: 2}
   m_audioClip: {fileID: 8300000, guid: 491e736f4c6a366419fa05d606867259, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.05

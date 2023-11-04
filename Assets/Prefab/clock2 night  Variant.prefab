@@ -100,10 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5722399572d9414ba745f8cd9bd4059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 1
+  maxHealth: 5
   deathDelay: 1
   score: 5
-  thisObjectname: 
+  thisObjectname: "\u6642\u8A08"
 --- !u!65 &6099878382347333419
 BoxCollider:
   m_ObjectHideFlags: 0

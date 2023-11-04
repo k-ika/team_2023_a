@@ -138,12 +138,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13799a6e5428a44fa27fd89f5627b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 150
+  maxHealth: 100
   _explosionPrefab: {fileID: 6688798433057325928, guid: 7576ac7fe72624447989d4973fa7979b, type: 3}
-  deathDelay: 3
-  explosionRadius: 5
-  maxDamage: 50
-  score: 20
+  deathDelay: 1
+  explosionRadius: 10
+  maxDamage: 100
+  score: 50
   thisObjectname: "\u30B3\u30D4\u30FC\u6A5F"
 --- !u!114 &387990647616580945
 MonoBehaviour:
