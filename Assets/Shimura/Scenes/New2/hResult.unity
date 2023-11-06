@@ -2471,9 +2471,9 @@ MonoBehaviour:
   multipliedbomb: 100
   multipliedtime: 1
   Srank: 4720
-  Arank: 4620
-  Brank: 4430
-  Crank: 4430
+  Arank: 4600
+  Brank: 4400
+  Crank: 4400
   ResultText: {fileID: 1359699012}
   ScoreText: {fileID: 1101151626}
   BombLeftText: {fileID: 1265919534}

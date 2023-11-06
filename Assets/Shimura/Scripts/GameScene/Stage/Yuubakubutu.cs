@@ -33,7 +33,32 @@ public class Yuubakubutu : MonoBehaviour
                     //親子関係を解除
                     gameObject.transform.parent = yuubakubutus.transform;
                     //このオブジェクトにRigidbodyをつける
-                    gameObject.AddComponent<Rigidbody>();               
+                    gameObject.AddComponent<Rigidbody>();
+                    //埋め込み防止用に位置を制限
+                    if (gameObject.transform.position.y < 0.5f)
+                    {
+                        Vector3 Pos = gameObject.transform.position;
+                        Pos.y = 0.5f;
+                        gameObject.transform.position = Pos;
+                    }
+                    else if (gameObject.transform.position.y > 4.0f)
+                    {
+                        Vector3 Pos = gameObject.transform.position;
+                        Pos.y = 4.0f;
+                        gameObject.transform.position = Pos;
+                    }
+                    else if (gameObject.transform.position.x > 9.0f)
+                    {
+                        Vector3 Pos = gameObject.transform.position;
+                        Pos.x = 9.0f;
+                        gameObject.transform.position = Pos;
+                    }
+                    else if (gameObject.transform.position.x < -9.0f)
+                    {
+                        Vector3 Pos = gameObject.transform.position;
+                        Pos.x = -9.0f;
+                        gameObject.transform.position = Pos;
+                    }
                 }
             }
         }

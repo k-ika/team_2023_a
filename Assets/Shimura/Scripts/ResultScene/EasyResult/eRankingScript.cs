@@ -49,6 +49,7 @@ public class eRankingScript : MonoBehaviour
             eNo1score = newscore;
             //NewRecordを表示させる
             NewRecordText.SetActive(true);
+            Invoke("TikaTika1",0.5f);
         }
         //2位のスコアより高いとき
         else if (newscore >= eNo2score)
@@ -83,7 +84,17 @@ public class eRankingScript : MonoBehaviour
         No3text.GetComponent<TextMeshProUGUI>().text = "3位:" + eNo3score.ToString("D4");
         No4text.GetComponent<TextMeshProUGUI>().text = "4位:" + eNo4score.ToString("D4");
         No5text.GetComponent<TextMeshProUGUI>().text = "5位:" + eNo5score.ToString("D4");
-
-
+    }
+    void TikaTika1()
+    {
+        //黄色にする
+        NewRecordText.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.92f,0.016f,1.0f);
+        Invoke("TikaTika2",0.5f);
+    }
+    void TikaTika2()
+    {
+        //白にする
+        NewRecordText.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,1.0f,1.0f,1.0f);
+        Invoke("TikaTika1",0.5f);
     }
 }

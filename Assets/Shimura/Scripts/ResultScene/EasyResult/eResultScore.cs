@@ -118,12 +118,16 @@ public class eResultScore : MonoBehaviour
         int madeScore;
         if (sumscore >= Srank)
         {
+            //黄色にする
+            RankText.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.92f,0.016f,1.0f);
             RankText.GetComponent<TextMeshProUGUI>().text = "Sランク";
             madeText.GetComponent<TextMeshProUGUI>().text = "";
         }
 
         else if (sumscore >= Arank)
         {
+            //赤色にする
+            RankText.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.0f,0.0f,1.0f);
             RankText.GetComponent<TextMeshProUGUI>().text = "Aランク";
             madeScore = Srank - sumscore;
             madeText.GetComponent<TextMeshProUGUI>().text = "Sランクまであと" + madeScore + "点";
@@ -131,6 +135,8 @@ public class eResultScore : MonoBehaviour
 
         else if (sumscore >= Brank)
         {
+            //青色にする
+            RankText.GetComponent<TextMeshProUGUI>().color = new Color(0.0f,0.0f,1.0f,1.0f);
             RankText.GetComponent<TextMeshProUGUI>().text = "Bランク";
             madeScore = Arank - sumscore;
             madeText.GetComponent<TextMeshProUGUI>().text = "Aランクまであと" + madeScore + "点";

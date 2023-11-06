@@ -11,9 +11,7 @@ public class hEnd : MonoBehaviour
     [SerializeField] GameObject EndPanel;
 
     [SerializeField] GameObject timetext;
-
-    //[Header("スコアの上限（すべてのオブジェクトのスコアの合計値）")] [SerializeField] int maxscore;
-
+    [SerializeField] GameObject Endtext;
     int s;
     int bl;
     float tl;
@@ -30,6 +28,7 @@ public class hEnd : MonoBehaviour
         //0秒になったらゲーム終了
         if (timetext.GetComponent<TextMeshProUGUI>().text == "0")
         {
+            Endtext.GetComponent<TextMeshProUGUI>().text = "Time Up!";
             Invoke("EndPanelSet",1);
             Invoke("LoadResult",6);
         }
@@ -37,13 +36,17 @@ public class hEnd : MonoBehaviour
         //爆弾の残量が0になったらゲーム終了
         if (GameSystem.GetComponent<BombLeft>().bombleft == 0)
         {
+            Endtext.GetComponent<TextMeshProUGUI>().text = "Finish!";
             Invoke("EndPanelSet",1);
             Invoke("LoadResult",10);
         }
 
-        //スコアが上限に達したらゲーム終了
-        if (GameSystem.GetComponent<DestroyPercent>().percent == 100) //GameSystem.GetComponent<Score>().sumscore == maxscore
+         //破壊率が100％になったらゲーム終了
+        if (GameSystem.GetComponent<DestroyPercent>().percent == 100)
         {
+            //黄色にする
+            Endtext.GetComponent<TextMeshProUGUI>().color = new Color(1.0f, 0.92f, 0.016f, 1.0f);
+            Endtext.GetComponent<TextMeshProUGUI>().text = "Complete!";
             Invoke("EndPanelSet",1);
             Invoke("LoadResult",6);
         }

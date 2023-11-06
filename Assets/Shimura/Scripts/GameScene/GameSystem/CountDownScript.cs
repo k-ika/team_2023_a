@@ -7,8 +7,6 @@ public class CountDownScript : MonoBehaviour
 {
     [SerializeField] GameObject counttext;
 
-    [Header("3にしといて")]　[SerializeField] float counttime = 3;
-    [Header("4にしといて")]　[SerializeField] float hiddentime = 4;
     [SerializeField] GameObject StartPanel;
     void Start()
     {
@@ -20,24 +18,35 @@ public class CountDownScript : MonoBehaviour
         // 全てのキーとデータを削除
         PlayerPrefs.DeleteAll();
         
-        Invoke("HiddenStartPanel", hiddentime);
+        counttext.GetComponent<TextMeshProUGUI>().text = "";
+        Invoke("Count3", 0.0f);
+        Invoke("Count2", 1);
+        Invoke("Count1", 2);
+        Invoke("Count0", 3);
+        Invoke("HiddenStartPanel", 4);
     }
 
     void Update()
     {
-         //時間を3から1に一秒ごとに書き換え
-        if (counttime >= 0.5)
-        {
-            counttime -= Time.deltaTime;
-            this.counttext.GetComponent<TextMeshProUGUI>().text = counttime.ToString("F0");
-        }
-        //0秒になったらStartに
-        else
-        {
-            this.counttext.GetComponent<TextMeshProUGUI>().text = "Start";
-        }
+
     }
 
+    void Count3()
+    {
+       counttext.GetComponent<TextMeshProUGUI>().text = "3";
+    }
+    void Count2()
+    {
+       counttext.GetComponent<TextMeshProUGUI>().text = "2";
+    }
+    void Count1()
+    {
+       counttext.GetComponent<TextMeshProUGUI>().text = "1";
+    }
+    void Count0()
+    {
+       counttext.GetComponent<TextMeshProUGUI>().text = "Start!";
+    }
     void HiddenStartPanel()
     {
        StartPanel.SetActive(false); 

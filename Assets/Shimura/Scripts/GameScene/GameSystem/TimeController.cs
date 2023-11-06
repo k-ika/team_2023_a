@@ -36,7 +36,14 @@ public class TimeController : MonoBehaviour
         //0秒になったら0のままに
         else
         {
-            timetext.GetComponent<TextMeshProUGUI>().text = "0";
+            timer = 0;
+            //timetext.GetComponent<TextMeshProUGUI>().text = "0";
+        }
+
+        if (timer <= 30)
+        {
+            //赤色にする
+            timetext.GetComponent<TextMeshProUGUI>().color = new Color(1.0f, 0f, 0f, 1.0f);
         }
     }
 }
