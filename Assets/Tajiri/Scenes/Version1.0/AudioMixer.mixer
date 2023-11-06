@@ -56,8 +56,8 @@ AudioMixerController:
   m_AudioMixerGroupViews:
   - guids:
     - 8d7c5593b4a23b04ead7fd65569bd409
-    - 4cd127a260590c540af1685471dfcadc
     - 6864a3ebaa1eff045947c154573baf59
+    - 4cd127a260590c540af1685471dfcadc
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}

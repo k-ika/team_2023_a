@@ -38,7 +38,7 @@ public class BombLeft : MonoBehaviour
     {
         if (bombleft < 500)
         {
-                if (bombleft > -1)
+                if (bombleft > 0)
             {
                 if (StartPanel.activeSelf || EndPanel.activeSelf || PausePanel.activeSelf)
                 {
@@ -52,13 +52,13 @@ public class BombLeft : MonoBehaviour
                         bombtext.GetComponent<TextMeshProUGUI>().text = "×" + bombleft.ToString("D2");
                         //ボムの画像を赤にする
                         BombRed.SetActive(true);
-                        Invoke("BombImageChange",1.0f);
 
                         if (bombleft > redbombleft)
                         {
                             //赤にする
                             bombtext.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.0f,0.0f,1.0f);
                             Invoke("BombLeftChangeColor",1.0f);
+                            Invoke("BombImageChange",1.0f);
                         }
                         else
                         {
@@ -70,7 +70,9 @@ public class BombLeft : MonoBehaviour
 
             else 
             {
-                bombtext.GetComponent<TextMeshProUGUI>().text = "×00";
+                bombtext.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.0f,0.0f,1.0f);
+                BombRed.SetActive(true);
+                bombleft = 0;
             }
         }
     }

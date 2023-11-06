@@ -33,8 +33,17 @@ public class DestroyPercent : MonoBehaviour
 
     public void PlusDestroyPer(int dp)
     {
+        //破壊されたオブジェクトの個数を加算
         numDestroyOb += dp;
+        //破壊率を計算
         percent = 100 * numDestroyOb / numObject;
+        //ゲーム画面上に反映
+        DestroyPertext.GetComponent<TextMeshProUGUI>().color = new Color(0.0f,1.0f,1.0f,1.0f);
         DestroyPertext.GetComponent<TextMeshProUGUI>().text = "破壊率:" + numDestroyOb.ToString("D2") + "/" + numObject.ToString("D2") + "(" + percent.ToString("F0")+ "%" + ")";
+        Invoke("TextChangeColor",0.5f);
+    }
+    void TextChangeColor()
+    {
+        DestroyPertext.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,1.0f,1.0f,1.0f);
     }
 }

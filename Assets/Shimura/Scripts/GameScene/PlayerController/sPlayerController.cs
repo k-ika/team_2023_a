@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class sPlayerController : MonoBehaviour
 {
     [Header("移動速度(0.04~0.1くらい)")] public float mainSPEED; //mainspeedをいじったら移動速度が変わる
     [Header("走るときの倍率")] [SerializeField] float runSPEED;
-    [Header("x方向の視点感度(3~7くらい)")] [SerializeField] float x_sensi; //これいじったらx方向の視点感度が変わる
-    [Header("y方向の視点感度(3~7くらい)")] [SerializeField] float y_sensi; //これいじったらy方向の視点感度が変わる
+    [Header("x方向の視点感度(3~7くらい)")] public float x_sensi; //これいじったらx方向の視点感度が変わる
+    [Header("y方向の視点感度(3~7くらい)")] public float y_sensi; //これいじったらy方向の視点感度が変わる
     [Header("カメラ")] [SerializeField] GameObject Maincamera; //cameraにMainCamera入れといて
+    [SerializeField] Slider SensitivitySlider;
 
     [Header("正のx座標の限界値")] public float pxLimit;
 
@@ -17,11 +19,14 @@ public class sPlayerController : MonoBehaviour
 
     [Header("負のz座標の限界値")] public float nzLimit;
     float time;
-
     float runspeed;
+    static float SensitivityRate = 3;
     void Start()
     {
         runspeed = 1.0f;
+        x_sensi = SensitivityRate;
+        y_sensi = SensitivityRate;
+        SensitivitySlider.value = SensitivityRate;
     }
  
     void Update()
@@ -86,5 +91,11 @@ public class sPlayerController : MonoBehaviour
         cameraAngle.y = 0;
         cameraAngle.z = 0;
         Maincamera.transform.localEulerAngles = cameraAngle;
+    }
+    public void SensitivityController()
+    {
+        x_sensi = SensitivitySlider.value;
+        y_sensi = SensitivitySlider.value;
+        SensitivityRate = SensitivitySlider.value;
     }
 }

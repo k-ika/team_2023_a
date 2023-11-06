@@ -30,7 +30,7 @@ public class CreateBomb : MonoBehaviour
     void Update()
     {
         //ボムの残量が0じゃないとき
-        if (GameSystem.GetComponent<BombLeft>().bombleft != -1)
+        if (GameSystem.GetComponent<BombLeft>().bombleft != 0)
         {
             //押してる間の時間を測る
             if (Input.GetMouseButton(0))
@@ -63,22 +63,23 @@ public class CreateBomb : MonoBehaviour
                     rb_ball = Instantiate(puttedbomb, fallpoint.transform.position, throwedbomb.transform.rotation).GetComponent<Rigidbody>(); // 玉を生成 
                     clicktime = 0f;  
                 }
-
-                //クリックした時間に応じてthrowedbombを発射
-                else if (clicktime >= 0.3f)
-                {
-                    //親子関係を解徐
-                    ball.transform.parent = null;
-                    //Rigidbaody復活
-                    ball.AddComponent<Rigidbody>();
-                    //rb_ballに代入
-                    rb_ball = ball.GetComponent<Rigidbody>();
-                    //カーソルの方向に力を一度加える
-                    rb_ball.AddForce(throwpoint.transform.forward * thrust, ForceMode.Impulse);
-                    clicktime = 0f;
-                    ready = false;
-                    //Yajirusi.SetActive(false);
-                }
+            }
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (ready == true)
+            {
+                //親子関係を解徐
+                ball.transform.parent = null;
+                //Rigidbaody復活
+                ball.AddComponent<Rigidbody>();
+                //rb_ballに代入
+                rb_ball = ball.GetComponent<Rigidbody>();
+                //カーソルの方向に力を一度加える
+                rb_ball.AddForce(throwpoint.transform.forward * thrust, ForceMode.Impulse);
+                clicktime = 0f;
+                ready = false;
+                //Yajirusi.SetActive(false);
             }
         }
     }
