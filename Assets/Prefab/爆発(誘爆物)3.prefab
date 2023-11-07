@@ -4981,7 +4981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b90dd26b61c6e54a9662ae1e752fdab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _futtobiPower: 500
+  _futtobiPower: 1000
   _startDelaySeconds: 0.1
   _durationFrameCount: 1
   _stopSeconds: 2

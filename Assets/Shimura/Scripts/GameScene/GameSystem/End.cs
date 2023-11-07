@@ -37,8 +37,8 @@ public class End : MonoBehaviour
         //爆弾の残量が0になったらゲーム終了
         if (GameSystem.GetComponent<BombLeft>().bombleft == 0)
         {
-            Invoke("EndPanelSet",1);
-            Invoke("LoadResult",10);
+            Invoke("EndPanelSet",5);
+            Invoke("LoadResult",15);
         }
 
         //スコアが上限に達したらゲーム終了

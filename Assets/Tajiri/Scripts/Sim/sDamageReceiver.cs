@@ -64,4 +64,23 @@ public class sDamageReceiver : MonoBehaviour
         //Logにポイントを表示させる
         GameSystem.GetComponent<LogScript>().LogUpdater("\n+" + score + "(" + thisObjectname + ")");
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            //プレイヤーがオブジェクトに触れているとき
+            //このオブジェクトのRigidbodyの位置、回転を固定
+            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        }
+    }
+    void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            //プレイヤーがオブジェクトのコライダーから出たとき
+            //このオブジェクトにRigidbbodyの位置、回転を自由に
+            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        }
+    }
 }

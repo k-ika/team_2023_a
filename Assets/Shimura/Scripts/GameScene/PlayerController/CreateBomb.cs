@@ -37,34 +37,35 @@ public class CreateBomb : MonoBehaviour
             {
                 clicktime += Time.deltaTime;
             }
+        }
 
-            if (ready == false)
-            { 
-                //クリックした時間が0.3秒を超えると爆弾を右手に表示させる
-                if (clicktime >= 0.3f)
-                {
-                    // 玉を生成
-                    ball = Instantiate(throwedbomb, throwpoint.transform.position, throwedbomb.transform.rotation); 
-                    //親子関係を作る
-                    ball.transform.parent = throwpoint.transform;
-                    //Rigidbaodyを破棄
-                    Destroy(ball.GetComponent<Rigidbody>());
-                    ready = true;
-                    //Yajirusi.SetActive(true);
-                }
-            }
-
-            //離したとき
-            if (Input.GetMouseButtonUp(0))
+        //readyがfalseのとき
+        if (ready == false)
+        {
+            //クリックした時間に応じてputtedbombを生成
+            if (clicktime < 0.3f && clicktime > 0.0001f)
             {
-                //クリックした時間に応じてputtedbombを生成
-                if (clicktime < 0.3f && clicktime > 0.0001f)
+                //離したとき
+                if (Input.GetMouseButtonUp(0))
                 {
                     rb_ball = Instantiate(puttedbomb, fallpoint.transform.position, throwedbomb.transform.rotation).GetComponent<Rigidbody>(); // 玉を生成 
-                    clicktime = 0f;  
-                }
+                    clicktime = 0f;
+                }  
+            }
+            //クリックした時間が0.3秒を超えると爆弾を右手に表示させる
+            else if (clicktime >= 0.3f)
+            {
+                // 玉を生成
+                ball = Instantiate(throwedbomb, throwpoint.transform.position, throwedbomb.transform.rotation); 
+                //親子関係を作る
+                ball.transform.parent = throwpoint.transform;
+                //Rigidbaodyを破棄
+                Destroy(ball.GetComponent<Rigidbody>());
+                ready = true;
+                //Yajirusi.SetActive(true);
             }
         }
+            
         if (Input.GetMouseButtonUp(0))
         {
             if (ready == true)

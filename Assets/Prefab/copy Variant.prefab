@@ -94,7 +94,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3378452074850571348}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -149,7 +149,7 @@ MonoBehaviour:
   maxHealth: 100
   _explosionPrefab: {fileID: 8831369213331038556}
   deathDelay: 1
-  explosionRadius: 10
+  explosionRadius: 12
   maxDamage: 100
   score: 50
   thisObjectname: "\u30B3\u30D4\u30FC\u6A5F"
