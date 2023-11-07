@@ -14,7 +14,7 @@ public class hResultScore : MonoBehaviour
     [Header("爆弾残量の倍率")] [SerializeField] int multipliedbomb;
 
     [Header("残り時間の倍率")] [SerializeField] int multipliedtime;
-
+    [Header("Godランクの条件(~以上)")] [SerializeField] int Godrank;
     [Header("Sランクの条件(~以上)")] [SerializeField] int Srank;
 
     [Header("Aランクの条件(~以上)")] [SerializeField] int Arank;
@@ -115,7 +115,14 @@ public class hResultScore : MonoBehaviour
     void DisplayRankText()
     {
         int madeScore;
-        if (sumscore >= Srank)
+        if (sumscore >= Godrank)
+        {
+            RankText.GetComponent<TextMeshProUGUI>().text = "Godランク";
+            madeText.GetComponent<TextMeshProUGUI>().text = "";
+            Invoke("TikaTika1",0.0f);
+        }
+
+        else if (sumscore >= Srank)
         {
             //黄色にする
             RankText.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.92f,0.016f,1.0f);
@@ -162,5 +169,55 @@ public class hResultScore : MonoBehaviour
         //UnityroomApiClient.Instance.SendScore(2, score, ScoreboardWriteMode.Always);
         // 全てのキーとデータを削除
         PlayerPrefs.DeleteAll();
+    }
+
+    void TikaTika1()
+    {
+        //赤色にする
+        RankText.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.0f,0.0f,1.0f);
+        Invoke("TikaTika2",0.25f);
+    }
+    void TikaTika2()
+    {
+        //黄色にする
+        RankText.GetComponent<TextMeshProUGUI>().color = new Color(1.0f,0.92f,0.016f,1.0f);
+        Invoke("TikaTika3",0.25f);
+    }
+    void TikaTika3()
+    {
+        //オレンジのの16進数
+        string colorString = "#FF9600";
+        Color newColor1;
+        ColorUtility.TryParseHtmlString(colorString, out newColor1);
+        RankText.GetComponent<TextMeshProUGUI>().color = newColor1;
+        Invoke("TikaTika4",0.25f);
+    }
+    void TikaTika4()
+    {
+        //緑にする
+        RankText.GetComponent<TextMeshProUGUI>().color = new Color(0.0f,1.0f,0.0f,1.0f);
+        Invoke("TikaTika5",0.25f);
+    }
+    void TikaTika5()
+    {
+        //水色(シアン)にする
+        RankText.GetComponent<TextMeshProUGUI>().color = new Color(0.0f,1.0f,1.0f,1.0f);
+        Invoke("TikaTika6",0.25f);
+    }
+    void TikaTika6()
+    {
+        //青色にする
+        RankText.GetComponent<TextMeshProUGUI>().color = new Color(0.0f,0.0f,1.0f,1.0f);
+        Invoke("TikaTika7",0.25f);
+    }
+    void TikaTika7()
+    {
+        //紫の16進数
+        string colorString = "#9600FF";
+        Color newColor2;
+        ColorUtility.TryParseHtmlString(colorString, out newColor2); // 新しくColorを作成
+        //紫にする
+        RankText.GetComponent<TextMeshProUGUI>().color = newColor2;
+        Invoke("TikaTika1",0.25f);
     }
 }
